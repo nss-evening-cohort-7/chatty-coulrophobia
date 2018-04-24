@@ -2,10 +2,10 @@ const messages = require('./messages');
 const printToDom = require('./printToDom');
 
 const buildDomString = () => {
-  const message = messages.getMessages();
+  const last20messages = messages.getMessages().slice(-20);
   let domString = '';
-  for (let i = 0; i < 20; i++) {
-    domString += `<div class='message' id=''>`;
+  for (let i = 0; i < last20messages.length; i++) {
+    domString += `<div class='message' id='${message.messageId}'>`;
     domString +=         `<div class='row'>`;
     domString +=           `<div class='col-sm-10'>`;
     domString += `<div class='row message-padding-left'>`;
@@ -33,7 +33,7 @@ const buildDomString = () => {
 const getUserName = (userId) => {
   const users = messages.getUsers();
   users.forEach((user) => {
-    if (userId = user.id) {
+    if (userId === user.id) {
       return user.name;
     };
   });
