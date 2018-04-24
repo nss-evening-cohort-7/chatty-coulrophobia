@@ -5,16 +5,16 @@ const buildDomString = () => {
   const last20messages = messages.getMessages().slice(-20);
   let domString = '';
   for (let i = 0; i < last20messages.length; i++) {
-    domString += `<div class='message' id='${message.messageId}'>`;
+    domString += `<div class='message' id='${last20messages.messageId}'>`;
     domString +=         `<div class='row'>`;
     domString +=           `<div class='col-sm-10'>`;
     domString += `<div class='row message-padding-left'>`;
-    domString +=               `<div class='col-sm-5'><h5><strong>From: </strong>${getUserName(message[i].userId)}</h5></div>`;
-    domString +=               `<div class='col-sm-3'><h6><strong>At: </strong>${message[i].timestampCreated}</h6></div>`;
-    domString +=               `<div class='col-sm-4'><h6><strong>Last edited: </strong>${message[i].timestampEdited}</h6></div>`;
+    domString +=               `<div class='col-sm-5'><h5><strong>From: </strong>${getUserName(last20messages[i].userId)}</h5></div>`;
+    domString +=               `<div class='col-sm-3'><h6><strong>At: </strong>${last20messages[i].timestampCreated}</h6></div>`;
+    domString +=               `<div class='col-sm-4'><h6><strong>Last edited: </strong>${last20messages[i].timestampEdited}</h6></div>`;
     domString +=             `</div>`;
     domString +=             `<div class='row message-padding-left'>`;
-    domString +=                `<div class='col-sm-12'><h5>${message[i].message}</h5></div>`;
+    domString +=                `<div class='col-sm-12'><h5>${last20messages[i].message}</h5></div>`;
     domString +=                 `</div>`;
     domString +=               `<div class='row'>`;
     domString +=             `</div>`;
