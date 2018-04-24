@@ -1,3 +1,39 @@
+/* HEADINGS (h1, h2, h3) are: font-family: 'Quattrocento', serif; */
+/* COPY TEXT (h4, h5, h6, p, a, input) are: font-family: 'Montserrat', sans-serif; */
+
+/* Overall Styling */
 body {
   background-color: aliceblue;
 }
+h1, h2, h3 {
+  font-family: 'Quattrocento', serif;
+}
+h4, h5, h6, p, a, input {
+  font-family: 'Montserrat', sans-serif;
+}
+/* End Overall Styling */
+
+/* Container Styling */
+.container-fluid {
+  width: 70%;
+  border: 1px solid red;
+  background: white;
+}
+/* end Container Styling */
+
+/* Message Wrapper Styling */
+.messages-wrapper {
+  width: 100%;
+  border: 2px solid black;
+  min-height: 300px;
+  margin: 0px 0px 15px 0px;
+  padding: 5px;
+}
+/* end Message Wrapper Styling */
+
+/* Individual Messages Styling */
+.message {
+  border: 1px solid black;
+  padding: 5px;
+}
+/* end Individual Messages Styling */
