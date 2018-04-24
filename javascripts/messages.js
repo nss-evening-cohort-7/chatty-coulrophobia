@@ -1,9 +1,8 @@
 let messages = [];
 let users = [];
 
-const setMessages = () => {
-  const myMessages = JSON.parse(this.responseText);
-  messages = myMessages.messages;
+const setMessages = (messageArray) => {
+  messages = messageArray.messages;
 };
 
 const getMessages = () => {

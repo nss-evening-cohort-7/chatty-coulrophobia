@@ -8,12 +8,18 @@ const whenUsersLoad = function () {
   printToDom.generateUserList(messages.getUsers());
 };
 
+const whenMessagesLoad = function () {
+  const myMessages = JSON.parse(this.responseText);
+  messages.setMessages(myMessages);
+};
+
 const whenFailToLoad = function () {
   console.error('XHR Fails~~~~!!!');
 };
 
 const initializer = () => {
-  xhr.loadUsers(whenUsersLoad,whenFailToLoad);
+  xhr.loadUsers(whenUsersLoad, whenFailToLoad);
+  xhr.loadMessages(whenMessagesLoad, whenFailToLoad);
 };
 
 module.exports = initializer;
