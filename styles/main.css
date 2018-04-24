@@ -14,12 +14,7 @@ body {
 }
 
 #chat-entry {
-  width: 600px;
-}
-
-.navbar-right > .checkbox {
-  display: inline;
-  padding-right: 10px;
+  width: 400px;
 }
 
 /* end navbar styles */
