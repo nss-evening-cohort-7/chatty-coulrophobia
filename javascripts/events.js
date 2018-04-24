@@ -8,7 +8,7 @@ const initializeChatListener = () => {
     if (e.key === 'Enter') {
       e.preventDefault();
       messages.newMessage();
-      console.log(messages.getMessages());
+      // Call function here to print all messages to DOM
     }
   });
 };

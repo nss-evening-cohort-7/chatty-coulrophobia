@@ -8,11 +8,11 @@
   <title>Chatty-Coulrophobia</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
     crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Quattrocento" rel="stylesheet">
   <link rel="stylesheet" href="/styles/main.css">
 </head>
 
 <body>
-
   <!-- navbar -->
   <nav class="navbar navbar-default">
     <div class="container-fluid">
@@ -29,15 +29,14 @@
           <img src="/images/navbar-clown.jpg" class="nav-logo">
         </a>
       </div>
-
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        
+
         <div class="navbar-form navbar-left">
           <div class="form-group chat-entry">
             <label for="sel1">Select user:</label>
             <select class="form-control" id="user-select">
-              
+
             </select>
             <input type="text" class="form-control input-block-level" placeholder="Enter chat message" id="chat-entry">
           </div>
@@ -49,25 +48,58 @@
             <button type="button" class="btn btn-default active">Light</button>
             <button type="button" class="btn btn-default">Dark</button>
             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Custom
-            <span class="caret"></span>
-            <span class="sr-only">Toggle Dropdown</span>
+              <span class="caret"></span>
+              <span class="sr-only">Toggle Dropdown</span>
             </button>
-          </div>          
+          </div>
         </ul>
       </div>
       <!-- /.navbar-collapse -->
     </div>
     <!-- /.container-fluid -->
   </nav>
-
-
-
-
-  <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-    crossorigin="anonymous"></script>
-  <script src="dist/app.js"></script>
+  <div class='container-fluid message-overall-div'>
+    <h3>Messages:</h3>
+    <div class='messages-wrapper' id='message-container'>
+      <div class='message' id=''>
+        <div class='row'>
+          <div class='col-sm-10'>
+            <div class='row message-padding-left'>
+              <div class='col-sm-5'>
+                <h5>
+                  <strong>From: </strong>Username</h5>
+              </div>
+              <div class='col-sm-3'>
+                <h6>
+                  <strong>At: </strong>January 1, 2018 07:40</h6>
+              </div>
+              <div class='col-sm-4'>
+                <h6>
+                  <strong>Last edited: </strong>January 1, 2018 07:43</h6>
+              </div>
+            </div>
+            <div class='row message-padding-left'>
+              <div class='col-sm-12'>
+                <h5>Everything is happy if you choose to make it that way.</h5>
+              </div>
+            </div>
+            <div class='row'>
+            </div>
+          </div>
+          <div class='col-sm-2'>
+            <div class='col-sm-12 text-right'>
+              <button class='btn btn-primary btn-message-edit'>Edit</button>
+              <button class='btn btn-danger btn-message-delete'>Delete</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"></script>
+    <script src="dist/app.js"></script>
 </body>
 
 </html>

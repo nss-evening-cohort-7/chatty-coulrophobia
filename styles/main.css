@@ -1,20 +1,64 @@
+/* HEADINGS (h1, h2, h3) are: font-family: 'Quattrocento', serif; */
+/* COPY TEXT (h4, h5, h6, p, a, input) are: font-family: 'Montserrat', sans-serif; */
+
+/* Overall Styling */
 body {
   background-color: aliceblue;
 }
+h1, h2, h3 {
+  font-family: 'Quattrocento', serif;
+}
+h4, h5, h6, p, a, input, button,
+span, label, form, ul {
+  font-family: 'Montserrat', sans-serif;
+}
+/* End Overall Styling */
 
 /* navbar styles */
-
 .nav-logo {
   height: 100%;
   margin: 0;
 }
-
 .navbar-brand {
   padding: 0;
 }
-
 #chat-entry {
   width: 400px;
 }
-
 /* end navbar styles */
+
+/* Container Styling */
+.message-overall-div {
+  width: 70%;
+  border: 4px solid black;
+  border-radius: 6px;
+  background: white;
+}
+/* end Container Styling */
+
+/* Message Wrapper Styling */
+.messages-wrapper {
+  width: 100%;
+  border: 2px solid black;
+  border-radius: 4px;
+  min-height: 300px;
+  margin: 0px 0px 15px 0px;
+  padding: 5px;
+}
+/* end Message Wrapper Styling */
+
+/* Individual Messages Styling */
+.message {
+  border: 1px solid lightslategrey;
+  border-radius: 4px;
+  padding: 5px;
+  background-color: rgb(238, 238, 238);
+}
+.btn-message-edit,
+.btn-message-delete {
+  margin: 3px;
+}
+.message-padding-left {
+  padding-left: 20px;
+}
+/* end Individual Messages Styling */

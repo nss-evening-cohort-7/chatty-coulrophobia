@@ -20,7 +20,7 @@ const getUsers = () => {
 };
 
 const newMessage = () => {
-  messages.push(addMessage);
+  messages.push(addMessage());
 };
 
 module.exports = {
