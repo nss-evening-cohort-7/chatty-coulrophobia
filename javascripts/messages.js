@@ -1,3 +1,5 @@
+const addMessage = require('./add');
+
 let messages = [];
 let users = [];
 
@@ -17,9 +19,14 @@ const getUsers = () => {
   return users;
 };
 
+const newMessage = () => {
+  messages.push(addMessage());
+};
+
 module.exports = {
   setUsers,
   getUsers,
   setMessages,
   getMessages,
+  newMessage,
 };
