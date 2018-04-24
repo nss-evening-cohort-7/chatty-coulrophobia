@@ -5,7 +5,7 @@ const buildDomString = () => {
   const last20messages = messages.getMessages().slice(-20);
   let domString = '';
   for (let i = 0; i < last20messages.length; i++) {
-    domString += `<div class='message' id='${last20messages.messageId}'>`;
+    domString += `<div class='message' id='${last20messages[i].messageId}'>`;
     domString +=         `<div class='row'>`;
     domString +=           `<div class='col-sm-10'>`;
     domString += `<div class='row message-padding-left'>`;
