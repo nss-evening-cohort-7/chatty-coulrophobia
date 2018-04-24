@@ -30,8 +30,7 @@ const addClearEvent = () => {
 };
 
 const addEditEvent = () => {
-  const editBtn = document.getElementsByClassName('btn-message-edit')[0];
-  editBtn.addEventListener('click',edit);
+  messageBox.addEventListener('click',edit);
 };
 
 module.exports = {
