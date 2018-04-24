@@ -24,6 +24,7 @@ const initializer = () => {
   events.checkMessageExists();
   events.addClearEvent();
   events.addEditEvent();
+  events.initializeChatListener();
 };
 
 module.exports = initializer;
