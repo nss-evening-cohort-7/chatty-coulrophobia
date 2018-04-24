@@ -16,7 +16,8 @@ h4, h5, h6, p, a, input, button {
 /* Container Styling */
 .container-fluid {
   width: 70%;
-  border: 1px solid red;
+  border: 4px solid black;
+  border-radius: 6px;
   background: white;
 }
 /* end Container Styling */
@@ -25,6 +26,7 @@ h4, h5, h6, p, a, input, button {
 .messages-wrapper {
   width: 100%;
   border: 2px solid black;
+  border-radius: 4px;
   min-height: 300px;
   margin: 0px 0px 15px 0px;
   padding: 5px;
@@ -34,6 +36,7 @@ h4, h5, h6, p, a, input, button {
 /* Individual Messages Styling */
 .message {
   border: 1px solid lightslategrey;
+  border-radius: 4px;
   padding: 5px;
   background-color: rgb(238, 238, 238);
 }
@@ -45,8 +48,3 @@ h4, h5, h6, p, a, input, button {
   padding-left: 20px;
 }
 /* end Individual Messages Styling */
-
-/* dummy/test styling here */
-div {
-  /* border: .5px solid red; */
-}
