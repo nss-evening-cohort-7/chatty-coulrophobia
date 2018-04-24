@@ -23,6 +23,7 @@ const initializer = () => {
   xhr.loadMessages(whenMessagesLoad, whenFailToLoad);
   events.checkMessageExists();
   events.addClearEvent();
+  events.initializeChatListener();
 };
 
 module.exports = initializer;
