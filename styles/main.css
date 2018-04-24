@@ -8,7 +8,7 @@ body {
 h1, h2, h3 {
   font-family: 'Quattrocento', serif;
 }
-h4, h5, h6, p, a, input {
+h4, h5, h6, p, a, input, button {
   font-family: 'Montserrat', sans-serif;
 }
 /* End Overall Styling */
@@ -33,7 +33,20 @@ h4, h5, h6, p, a, input {
 
 /* Individual Messages Styling */
 .message {
-  border: 1px solid black;
+  border: 1px solid lightslategrey;
   padding: 5px;
+  background-color: rgb(238, 238, 238);
+}
+.btn-message-edit,
+.btn-message-delete {
+  margin: 3px;
+}
+.message-padding-left {
+  padding-left: 20px;
 }
 /* end Individual Messages Styling */
+
+/* dummy/test styling here */
+div {
+  /* border: .5px solid red; */
+}
