@@ -1,6 +1,7 @@
 const xhr = require('./xhr');
 const messages = require('./messages');
 const printToDom = require('./printToDom');
+const events = require('./events');
 
 const whenUsersLoad = function () {
   const usersData = JSON.parse(this.responseText).users;
@@ -14,6 +15,8 @@ const whenFailToLoad = function () {
 
 const initializer = () => {
   xhr.loadUsers(whenUsersLoad,whenFailToLoad);
+  events.checkMessageExists();
+  events.addClearEvent();
 };
 
 module.exports = initializer;
