@@ -1,3 +1,5 @@
+const edit = require('./edit');
+
 const messageBox = document.getElementById('message-container');
 const clearAllBtn = document.getElementById('clear-all');
 
@@ -27,7 +29,13 @@ const addClearEvent = () => {
   clearAllBtn.addEventListener('click',clearAll);
 };
 
+const addEditEvent = () => {
+  const editBtn = document.getElementsByClassName('btn-message-edit')[0];
+  editBtn.addEventListener('click',edit);
+};
+
 module.exports = {
   addClearEvent,
   checkMessageExists,
+  addEditEvent,
 };
