@@ -2,4 +2,15 @@ const printToDom = (domString, divId) => {
   document.getElementById(divId).innerHTML = domString;
 };
 
-module.exports = printToDom;
+const generateUserList = (users) => {
+  let domString = '';
+  users.forEach((user) => {
+    domString += `<option>${user.name}</option>`;
+  });
+  printToDom(domString,'user-select');
+};
+
+module.exports = {
+  printToDom,
+  generateUserList,
+};
