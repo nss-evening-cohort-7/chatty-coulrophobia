@@ -8,13 +8,27 @@ body {
 h1, h2, h3 {
   font-family: 'Quattrocento', serif;
 }
-h4, h5, h6, p, a, input, button {
+h4, h5, h6, p, a, input, button,
+span, label, form, ul {
   font-family: 'Montserrat', sans-serif;
 }
 /* End Overall Styling */
 
+/* navbar styles */
+.nav-logo {
+  height: 100%;
+  margin: 0;
+}
+.navbar-brand {
+  padding: 0;
+}
+#chat-entry {
+  width: 400px;
+}
+/* end navbar styles */
+
 /* Container Styling */
-.container-fluid {
+.message-overall-div {
   width: 70%;
   border: 4px solid black;
   border-radius: 6px;
