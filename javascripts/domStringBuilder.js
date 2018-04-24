@@ -21,8 +21,8 @@ const buildDomString = () => {
     domString +=           `</div>`;
     domString +=         `<div class='col-sm-2'>`;
     domString +=           `<div class ='col-sm-12 text-right'>`;
-    domString +=             `<button class='btn btn-primary btn-message-edit'><span>glyphicon glyphicon-trash</span></button>`;
-    domString += `<button class='btn btn-danger btn-message-delete'><span>glyphicon glyphicon-trash</span></button>`;
+    domString +=             `<button class='btn btn-primary btn-message-edit'><span class='>glyphicon glyphicon-pencil'></span></button>`;
+    domString += `<button class='btn btn-danger btn-message-delete'><span class='glyphicon glyphicon-trash'></span></button>`;
     domString +=           `</div>`;
     domString +=         `</div>`;
     domString +=       `</div>`;
