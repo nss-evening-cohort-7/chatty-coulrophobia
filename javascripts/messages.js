@@ -11,6 +11,10 @@ const getMessages = () => {
   return messages;
 };
 
+const deleteMessage = arrayPosition => {
+  messages.splice(arrayPosition, 1);
+}
+
 const setUsers = (userArray) => {
   users = userArray;
 };
@@ -29,4 +33,5 @@ module.exports = {
   setMessages,
   getMessages,
   newMessage,
+  deleteMessage,
 };
