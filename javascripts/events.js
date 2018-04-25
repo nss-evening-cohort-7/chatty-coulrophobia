@@ -1,5 +1,5 @@
 const messages = require('./messages');
-
+const domStringBuilder = require('./domStringBuilder');
 const messageBox = document.getElementById('message-container');
 const clearAllBtn = document.getElementById('clear-all');
 
@@ -8,7 +8,8 @@ const initializeChatListener = () => {
     if (e.key === 'Enter') {
       e.preventDefault();
       messages.newMessage();
-      // Call function here to print all messages to DOM
+      domStringBuilder(messages.getMessages());
+      document.getElementById('chat-entry').value = '';
     }
   });
 };
