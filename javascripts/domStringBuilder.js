@@ -34,11 +34,13 @@ const buildDomString = () => {
 
 const getUserName = (userId) => {
   const users = messages.getUsers();
+  let userName = '';
   users.forEach((user) => {
     if (userId === user.id) {
-      return user.name;
+      userName = user.name;
     };
   });
+  return userName;
 };
 
 module.exports = buildDomString;
