@@ -12,7 +12,6 @@ const whenUsersLoad = function () {
 const whenMessagesLoad = function () {
   const myMessages = JSON.parse(this.responseText);
   messages.setMessages(myMessages);
-  events.initializeDeleteBtnListeners();
 };
 
 const whenFailToLoad = function () {

@@ -1,19 +1,25 @@
 const messages = require('./messages');
 const deleteThisMessage = require ('./delete');
-
+const domStringBuilder = require('./domStringBuilder');
 const messageBox = document.getElementById('message-container');
 const clearAllBtn = document.getElementById('clear-all');
 
 const initializeDeleteBtnListeners = () => {
-  document.getElementById('message-container').addEventListener('click', deleteThisMessage);
+  const buttonCollection = document.getElementsByClassName('btn-message-delete');
+  for (let i = 0; i < buttonCollection.length; i++) {
+    buttonCollection[i].addEventListener('click', deleteThisMessage);
+    console.log(buttonCollection[i]);
+  }
 };
 
 const initializeChatListener = () => {
-  document.getElementById('chat-entry').addEventListener('keypress', e => {
-    if (e.key === 'Enter') {
-      e.preventDefault();
+  const entryField = document.getElementById('chat-entry');
+  entryField.addEventListener('keypress', e => {
+    if (e.key === 'Enter' && entryField.value) {
       messages.newMessage();
-      // Call function here to print all messages to DOM
+      domStringBuilder(messages.getMessages());
+      entryField.value = '';
+      initializeDeleteBtnListeners();
     }
   });
 };
