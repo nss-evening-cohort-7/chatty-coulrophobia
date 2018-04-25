@@ -1,3 +1,5 @@
+
+const edit = require('./edit');
 const messages = require('./messages');
 
 const messageBox = document.getElementById('message-container');
@@ -8,6 +10,7 @@ const initializeChatListener = () => {
     if (e.key === 'Enter') {
       e.preventDefault();
       messages.newMessage();
+      edit.reprintMessage();
       // Call function here to print all messages to DOM
     }
   });
@@ -39,8 +42,13 @@ const addClearEvent = () => {
   clearAllBtn.addEventListener('click',clearAll);
 };
 
+const addEditEvent = () => {
+  messageBox.addEventListener('click',edit.retrieveMessage);
+};
+
 module.exports = {
   addClearEvent,
   checkMessageExists,
+  addEditEvent,
   initializeChatListener,
 };
