@@ -13,7 +13,7 @@ const getMessages = () => {
 
 const deleteMessage = arrayPosition => {
   messages.splice(arrayPosition, 1);
-}
+};
 
 const setUsers = (userArray) => {
   users = userArray;

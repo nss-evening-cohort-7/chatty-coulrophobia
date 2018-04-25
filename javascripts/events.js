@@ -1,7 +1,12 @@
 const messages = require('./messages');
+const deleteThisMessage = require ('./delete');
 
 const messageBox = document.getElementById('message-container');
 const clearAllBtn = document.getElementById('clear-all');
+
+const initializeDeleteBtnListeners = () => {
+  document.getElementById('message-container').addEventListener('click', deleteThisMessage);
+};
 
 const initializeChatListener = () => {
   document.getElementById('chat-entry').addEventListener('keypress', e => {
@@ -43,4 +48,5 @@ module.exports = {
   addClearEvent,
   checkMessageExists,
   initializeChatListener,
+  initializeDeleteBtnListeners,
 };

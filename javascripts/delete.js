@@ -1,6 +1,6 @@
 const messages = require('./messages');
 
-let originalMessages = messages.getMessages();
+const originalMessages = messages.getMessages();
 
 const deleteThisMessage = (e) => {
   const messageSelectedId = e.target.parentNode.parentNode.parentNode.parentNode.target.id;
@@ -11,4 +11,4 @@ const deleteThisMessage = (e) => {
   });
 };
 
-module.exports = ;
+module.exports = deleteThisMessage;
