@@ -1,4 +1,5 @@
 const getCurrentTime = require('./timestamp');
+const messageArray = require('./messages');
 
 const focusInputField = (chatEntry) => {
   chatEntry.focus();
@@ -34,10 +35,10 @@ const retrieveMessage = (e) => {
 const reprintMessage = () => {
   const editedMessage = document.getElementById('chat-entry').value;
   const lastEditedTime = getCurrentTime();
+  const message = document.getElementById('message-back');
+  const editedTime = document.getElementById('last-edited-back');
 
-  if (editedMessage) {
-    const message = document.getElementById('message-back');
-    const editedTime = document.getElementById('last-edited-back');
+  if (editedMessage && message && editedTime) {
     message.innerHTML = `<h5>${editedMessage}</h5>`;
     editedTime.innerHTML = `<h6><strong>Last edited: </strong>${lastEditedTime}</h6>`;
 
@@ -45,6 +46,7 @@ const reprintMessage = () => {
     message.id = '';
     editedTime.id = '';
 
+    console.log(messageArray.getMessages());
     removeHighlight();
   };
 };

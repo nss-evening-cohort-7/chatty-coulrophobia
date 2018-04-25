@@ -53,6 +53,7 @@ span, label, form, ul {
   border-radius: 4px;
   padding: 5px;
   background-color: rgb(238, 238, 238);
+  box-sizing: border-box;
 }
 .btn-message-edit,
 .btn-message-delete {
