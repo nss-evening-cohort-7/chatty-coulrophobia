@@ -29,7 +29,7 @@ const buildDomString = () => {
     domString +=     `</div>`;
     domString +=   `</div>`;
   };
-  printToDom(domString, 'message-container');
+  printToDom.printToDom(domString, 'message-container');
 };
 
 const getUserName = (userId) => {
