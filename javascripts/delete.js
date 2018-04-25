@@ -3,9 +3,12 @@ const messages = require('./messages');
 const originalMessages = messages.getMessages();
 
 const deleteThisMessage = (e) => {
-  const messageSelectedId = e.target.parentNode.parentNode.parentNode.parentNode.target.id;
+  console.log(e);
+  console.log(e.target.parentNode.parentNode.parentNode.parentNode);
+  const messageSelected = e.target.parentNode.parentNode.parentNode.parentNode;
   originalMessages.forEach((message) => {
-    if (message.messageID === messageSelectedId) {
+    if (message.messageID === messageSelected) {
+
       messages.deleteMessage(message.messageID);
     }
   });
