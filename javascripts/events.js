@@ -4,12 +4,12 @@ const messageBox = document.getElementById('message-container');
 const clearAllBtn = document.getElementById('clear-all');
 
 const initializeChatListener = () => {
-  document.getElementById('chat-entry').addEventListener('keypress', e => {
-    if (e.key === 'Enter') {
-      e.preventDefault();
+  const entryField = document.getElementById('chat-entry');
+  entryField.addEventListener('keypress', e => {
+    if (e.key === 'Enter' && entryField.value) {
       messages.newMessage();
       domStringBuilder(messages.getMessages());
-      document.getElementById('chat-entry').value = '';
+      entryField.value = '';
     }
   });
 };
