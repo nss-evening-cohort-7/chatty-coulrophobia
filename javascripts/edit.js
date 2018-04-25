@@ -1,4 +1,4 @@
-const messages = require('./messages');
+const getCurrentTime = require('./timestamp');
 
 const retrieveMessage = (e) => {
   if (e.target.classList[2] === 'btn-message-edit') {
@@ -15,9 +15,14 @@ const retrieveMessage = (e) => {
 };
 
 const reprintMessage = () => {
-  const allMessages = messages.getMessages();
-  // const editedMessage = document.getElementById('chat-entry');
-  console.log(allMessages);
+  let editedMessage = document.getElementById('chat-entry').value;
+  const lastEditedTime = getCurrentTime();
+
+  if (editedMessage) {
+    document.getElementById('message-back').innerHTML = `<h5>${editedMessage}</h5>`;
+    document.getElementById('last-edited-back').innerHTML = `<h6><strong>Last edited: </strong>${lastEditedTime}</h6>`;
+    editedMessage = '';
+  };
 };
 
 module.exports = {
