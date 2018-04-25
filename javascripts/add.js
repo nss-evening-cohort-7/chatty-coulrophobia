@@ -9,23 +9,11 @@ const buildMessage = () => {
   messageObject.editTime = '';
   messageObject.messageID = messageIdCounter.toString().padStart(5, '0');
   messageObject.message = document.getElementById('chat-entry').value;
-  switch (document.getElementById('user-select').value) {
-    case 'Bozo':
-      messageObject.userId = '1';
-      break;
-    case 'Krusty':
-      messageObject.userId = '2';
-      break;
-    case 'Chuckles':
-      messageObject.userId = '3';
-      break;
-    case 'Dottie':
-      messageObject.userId = '4';
-      break;
-    case 'Pennywise':
-      messageObject.userId = '5';
-      break;
-  }
+  [...document.getElementById('user-select').children,].forEach(element => {
+    if (element.selected) {
+      messageObject.userId = element.id;
+    }
+  });
   return messageObject;
 };
 

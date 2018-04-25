@@ -5,7 +5,7 @@ const printToDom = (domString, divId) => {
 const generateUserList = (users) => {
   let domString = '';
   users.forEach((user) => {
-    domString += `<option>${user.name}</option>`;
+    domString += `<option id='${user.id}'>${user.name}</option>`;
   });
   printToDom(domString,'user-select');
 };
