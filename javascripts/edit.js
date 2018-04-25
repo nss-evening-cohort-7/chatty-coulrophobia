@@ -15,13 +15,18 @@ const retrieveMessage = (e) => {
 };
 
 const reprintMessage = () => {
-  let editedMessage = document.getElementById('chat-entry').value;
+  const editedMessage = document.getElementById('chat-entry').value;
   const lastEditedTime = getCurrentTime();
 
   if (editedMessage) {
-    document.getElementById('message-back').innerHTML = `<h5>${editedMessage}</h5>`;
-    document.getElementById('last-edited-back').innerHTML = `<h6><strong>Last edited: </strong>${lastEditedTime}</h6>`;
-    editedMessage = '';
+    const message = document.getElementById('message-back');
+    const editedTime = document.getElementById('last-edited-back');
+    message.innerHTML = `<h5>${editedMessage}</h5>`;
+    editedTime.innerHTML = `<h6><strong>Last edited: </strong>${lastEditedTime}</h6>`;
+
+    document.getElementById('chat-entry').value = '';
+    message.id = '';
+    editedTime.id = '';
   };
 };
 
