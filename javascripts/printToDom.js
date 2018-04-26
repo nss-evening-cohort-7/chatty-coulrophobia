@@ -1,5 +1,6 @@
 const printToDom = (domString, divId) => {
   document.getElementById(divId).innerHTML = domString;
+  document.getElementById('save-CustomTheme-Btn').click();
 };
 
 const generateUserList = (users) => {
@@ -7,7 +8,7 @@ const generateUserList = (users) => {
   users.forEach((user) => {
     domString += `<option id='${user.id}'>${user.name}</option>`;
   });
-  printToDom(domString,'user-select');
+  printToDom(domString, 'user-select');
 };
 
 module.exports = {
