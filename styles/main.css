@@ -35,6 +35,10 @@ span, label, form, ul {
   border-radius: 6px;
   background: white;
 }
+
+.message-overall-div h3 {
+  display: inline-block;
+}
 /* end Container Styling */
 
 /* Message Wrapper Styling */
@@ -45,6 +49,11 @@ span, label, form, ul {
   min-height: 300px;
   margin: 0px 0px 15px 0px;
   padding: 5px;
+}
+
+#clear-all {
+  float: right;
+  margin-top: 10px;
 }
 /* end Message Wrapper Styling */
 
