@@ -25,6 +25,19 @@ const initializer = () => {
   events.addClearEvent();
   events.initializeChatListener();
   events.addChngColorEvent();
+
+  $('.picker').lsxEmojiPicker({
+    twemoji: false,
+    onSelect: function (emoji) {
+      document.getElementById('chat-entry').value +=
+        [
+          ...document.getElementsByTagName('span'),
+        ].filter(element => {
+          return element.title === emoji.name;
+        })[0].innerText;
+    },
+  });
+  document.getElementsByClassName('lsx-emojipicker-container')[0].style.top = '5px';
 };
 
 module.exports = initializer;

@@ -16,6 +16,6 @@
     "matchdep": "^2.0.0"
   },
   "dependencies": {
-    "emoji-parser": "^0.1.2"
+    "lsx-emojipicker": "^1.1.2"
   }
 }

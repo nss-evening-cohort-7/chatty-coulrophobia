@@ -9,6 +9,12 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
     crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Montserrat|Quattrocento" rel="stylesheet">
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+  <link href="lib/node_modules/lsx-emojipicker/src/jquery.lsxemojipicker.css" rel="stylesheet">
+  <script src="lib/node_modules/lsx-emojipicker/src/jquery.lsxemojipicker.js"></script>
   <link rel="stylesheet" href="/styles/main.css">
 </head>
 
@@ -20,7 +26,7 @@
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
           aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
+          <span class="sr-only">Toggle navigation </span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
@@ -34,11 +40,15 @@
 
         <div class="navbar-form navbar-left">
           <div class="form-group chat-entry">
-            <label for="sel1">Select user:</label>
+            <label for="sel1">Select user: </label>
             <select class="form-control" id="user-select">
 
             </select>
-            <input type="text" class="form-control input-block-level" placeholder="Enter chat message" id="chat-entry">
+
+
+              <input type="text" class="form-control input-block-level" placeholder="Enter chat message" id="chat-entry">
+              <div class="picker">😄</div>
+
           </div>
           <button type="button" class="btn btn-default" id="clear-all">Clear All Messages</button>
         </div>
@@ -132,10 +142,7 @@
         </div>
       </div>
     </div>
-    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-      crossorigin="anonymous"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jscolor/2.0.4/jscolor.min.js"></script>
     <script src="dist/app.js"></script>
 </body>
