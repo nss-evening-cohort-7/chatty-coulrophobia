@@ -26,6 +26,8 @@ const initializer = () => {
   events.checkMessageExists();
   events.addClearEvent();
   events.initializeChatListener();
+  events.addChngColorEvent();
+
   $('.picker').lsxEmojiPicker({
     twemoji: false,
     onSelect: function (emoji) {

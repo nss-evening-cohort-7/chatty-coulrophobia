@@ -73,6 +73,30 @@ span, label, form, ul {
 }
 /* end Individual Messages Styling */
 
+#myModal {
+  z-index: 998;
+}
+
+.modal-backdrop {
+  z-index: 997;
+}
+
+.color-picker-btn {
+  height: 50px;;
+  width: 150px;
+}
+
+.modal-body {
+  height: 190px;
+}
+
+.preview-btn-container, .sample-container, .btn-container {
+  height: 165px;
+}
+
+.sample-container {
+  border: 2px solid black;
+}
 /* Custom Emoji Picker Styles */
 
 .lsx-emojipicker-container:after {
