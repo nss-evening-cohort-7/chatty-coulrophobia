@@ -1,24 +1,25 @@
-// const messages = require('./messages');
+const messages = require('./messages');
+const domStringBuilder = require('./domStringBuilder');
 
-// const originalMessages = messages.getMessages();
+// identify the message clicked with the matching message in the array
+const matchMessages = id => {
+  const originalMessages = messages.getMessages();
+  for (let i = 0; i < originalMessages.length; i++) {
+    if (originalMessages[i].messageId === id) {
+      messages.deleteMessage(i);
+      domStringBuilder(messages.getMessages());
+    }
+  }
+};
 
+// takes in an event & determines if its the 'delete' button & the message id value
 const deleteThisMessage = (e) => {
-  // console.log(e);
-  // btn-message-delete
-  // console.log(e.target.classList);
+  let messageId = -999;
   if (e.target.classList.contains('btn-message-delete')) {
-    console.log('DELETE BUTTON CLICKED');
-    console.log(e.target.parentNode.parentNode.parentNode.parentNode.id);
+    messageId = e.target.parentNode.parentNode.parentNode.parentNode.id;
+    matchMessages(messageId);
   }
   e.stopPropagation();
-
-  // const messageSelectedId = e.target.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.id;
-  // originalMessages.forEach((message) => {
-  //   if (message.messageId === messageSelectedId) {
-  //     console.log('message.messageId', message.messageId);
-  //     messages.deleteMessage(message.messageId);
-  //   }
-  // });
 };
 
 module.exports = deleteThisMessage;

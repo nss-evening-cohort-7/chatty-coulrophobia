@@ -15,7 +15,6 @@ const initializeChatListener = () => {
       messages.newMessage();
       domStringBuilder(messages.getMessages());
       entryField.value = '';
-      initializeDeleteBtnListeners();
     }
   });
 };
