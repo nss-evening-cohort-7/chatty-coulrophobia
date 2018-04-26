@@ -1,6 +1,8 @@
 const edit = require('./edit');
 const messages = require('./messages');
 const domStringBuilder = require('./domStringBuilder');
+const themes = require ('./themes');
+
 const messageBox = document.getElementById('message-container');
 const clearAllBtn = document.getElementById('clear-all');
 
@@ -56,9 +58,17 @@ const addEditEvent = () => {
   messageBox.addEventListener('click',edit.retrieveMessage);
 };
 
+const addChngColorEvent = () => {
+  const previewBtn = document.getElementById('preview-btn');
+  previewBtn.addEventListener('click', themes.previewTheme);
+  const saveTheme = document.getElementById('save-CustomTheme-Btn');
+  saveTheme.addEventListener('click', themes.applyTheme);
+};
+
 module.exports = {
   addClearEvent,
   checkMessageExists,
   addEditEvent,
   initializeChatListener,
+  addChngColorEvent,
 };
