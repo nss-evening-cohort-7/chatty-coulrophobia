@@ -1,16 +1,17 @@
 const edit = require('./edit');
 const messages = require('./messages');
-
+const domStringBuilder = require('./domStringBuilder');
 const messageBox = document.getElementById('message-container');
 const clearAllBtn = document.getElementById('clear-all');
 
 const initializeChatListener = () => {
-  document.getElementById('chat-entry').addEventListener('keypress', e => {
-    if (e.key === 'Enter') {
-      e.preventDefault();
+  const entryField = document.getElementById('chat-entry');
+  entryField.addEventListener('keypress', e => {
+    if (e.key === 'Enter' && entryField.value) {
       messages.newMessage();
       edit.reprintMessage();
-      // Call function here to print all messages to DOM
+      domStringBuilder(messages.getMessages());
+      entryField.value = '';
     }
   });
 };

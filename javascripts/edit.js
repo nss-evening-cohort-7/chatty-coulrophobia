@@ -1,13 +1,21 @@
 const getCurrentTime = require('./timestamp');
 const messageArray = require('./messages');
 
+let messageId = '';
+
 const focusInputField = (chatEntry) => {
   chatEntry.focus();
 };
 
 const highlightMessageBeingEdited = (e) => {
-  const individualMessageBox = e.target.parentNode.parentNode.parentNode.parentNode;
-  individualMessageBox.classList.add('highlight');
+  removeHighlight();
+  if (e.target.classList.contains('btn-message-edit')) {
+    const individualMessageBox = e.target.parentNode.parentNode.parentNode.parentNode;
+    individualMessageBox.classList.add('highlight');
+  } else if (e.target.classList.contains('glyphicon')) {
+    const individualMessageBox = e.target.parentNode.parentNode.parentNode.parentNode.parentNode;
+    individualMessageBox.classList.add('highlight');
+  };
 };
 
 const removeHighlight = () => {
@@ -20,11 +28,16 @@ const removeHighlight = () => {
 const retrieveMessage = (e) => {
   if (e.target.classList.contains('btn-message-edit')) {
     const messageLine = e.target.parentNode.parentNode.parentNode.children[0].children[1].children[0].children[0];
-    const lastEditedLine = e.target.parentNode.parentNode.parentNode.children[0].children[0].children[2];
+    messageId = e.target.parentNode.parentNode.parentNode.parentNode.id;
     const originalMessage = messageLine.innerHTML;
-    // add anchor for message to be written back
-    messageLine.parentNode.id = 'message-back';
-    lastEditedLine.id = 'last-edited-back';
+    const chatEntry = document.getElementById('chat-entry');
+    chatEntry.value = originalMessage;
+    focusInputField(chatEntry);
+    highlightMessageBeingEdited(e);
+  } else if (e.target.classList.contains('glyphicon')) {
+    const messageLine = e.target.parentNode.parentNode.parentNode.parentNode.children[0].children[1].children[0].children[0];
+    messageId = e.target.parentNode.parentNode.parentNode.parentNode.parentNode.id;
+    const originalMessage = messageLine.innerHTML;
     const chatEntry = document.getElementById('chat-entry');
     chatEntry.value = originalMessage;
     focusInputField(chatEntry);
@@ -35,20 +48,15 @@ const retrieveMessage = (e) => {
 const reprintMessage = () => {
   const editedMessage = document.getElementById('chat-entry').value;
   const lastEditedTime = getCurrentTime();
-  const message = document.getElementById('message-back');
-  const editedTime = document.getElementById('last-edited-back');
+  const allMessages = messageArray.getMessages();
 
-  if (editedMessage && message && editedTime) {
-    message.innerHTML = `<h5>${editedMessage}</h5>`;
-    editedTime.innerHTML = `<h6><strong>Last edited: </strong>${lastEditedTime}</h6>`;
-
-    document.getElementById('chat-entry').value = '';
-    message.id = '';
-    editedTime.id = '';
-
-    console.log(messageArray.getMessages());
-    removeHighlight();
+  for (let i = 0; i < allMessages.length; i++) {
+    if (allMessages[i].messageId * 1 === messageId * 1) {
+      allMessages[i].message = editedMessage;
+      allMessages[i].editTime = lastEditedTime;
+    };
   };
+  removeHighlight();
 };
 
 module.exports = {
