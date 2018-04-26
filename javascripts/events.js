@@ -5,11 +5,7 @@ const messageBox = document.getElementById('message-container');
 const clearAllBtn = document.getElementById('clear-all');
 
 const initializeDeleteBtnListeners = () => {
-  const buttonCollection = document.getElementsByClassName('btn-message-delete');
-  for (let i = 0; i < buttonCollection.length; i++) {
-    buttonCollection[i].addEventListener('click', deleteThisMessage);
-    console.log(buttonCollection[i]);
-  }
+  document.getElementById('message-container').addEventListener('click', deleteThisMessage);
 };
 
 const initializeChatListener = () => {
