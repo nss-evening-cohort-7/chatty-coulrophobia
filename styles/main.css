@@ -65,11 +65,11 @@ span, label, form, ul {
 }
 /* end Individual Messages Styling */
 
-<<<<<<< HEAD
+
 .highlight{
   border: 3px solid red;
 }
-=======
+
 #myModal {
   z-index: 998;
 }
@@ -108,4 +108,3 @@ span, label, form, ul {
 }
 
 /* End Emoji Picker Styles */
->>>>>>> master
