@@ -4,14 +4,28 @@ const domStringBuilder = require('./domStringBuilder');
 const messageBox = document.getElementById('message-container');
 const clearAllBtn = document.getElementById('clear-all');
 
+const checkAddOrEdit = (entryField) => {
+  const editOn = document.getElementsByClassName('highlight')[0];
+  if (!editOn) {
+    messages.newMessage();
+    domStringBuilder(messages.getMessages());
+    entryField.value = '';
+  } else {
+    edit.reprintMessage();
+    domStringBuilder(messages.getMessages());
+    entryField.value = '';
+  };
+};
+
 const initializeChatListener = () => {
   const entryField = document.getElementById('chat-entry');
   entryField.addEventListener('keypress', e => {
     if (e.key === 'Enter' && entryField.value) {
-      messages.newMessage();
-      edit.reprintMessage();
-      domStringBuilder(messages.getMessages());
-      entryField.value = '';
+      checkAddOrEdit(entryField);
+      // messages.newMessage();
+      // edit.reprintMessage();
+      // domStringBuilder(messages.getMessages());
+      // entryField.value = '';
     }
   });
 };
