@@ -22,10 +22,6 @@ const initializeChatListener = () => {
   entryField.addEventListener('keypress', e => {
     if (e.key === 'Enter' && entryField.value) {
       checkAddOrEdit(entryField);
-      // messages.newMessage();
-      // edit.reprintMessage();
-      // domStringBuilder(messages.getMessages());
-      // entryField.value = '';
     }
   });
 };
