@@ -24,6 +24,7 @@ span, label, form, ul {
 }
 #chat-entry {
   width: 400px;
+  padding-right: 30px;
 }
 /* end navbar styles */
 
@@ -62,3 +63,18 @@ span, label, form, ul {
   padding-left: 20px;
 }
 /* end Individual Messages Styling */
+
+/* Custom Emoji Picker Styles */
+
+.lsx-emojipicker-container:after {
+  display: none;
+}
+
+.picker {
+  display: inline;
+  cursor: pointer;
+  position: relative;
+  left: -30px;
+}
+
+/* End Emoji Picker Styles */
