@@ -1,5 +1,7 @@
 const messages = require('./messages');
 const domStringBuilder = require('./domStringBuilder');
+const themes = require ('./themes');
+
 const messageBox = document.getElementById('message-container');
 const clearAllBtn = document.getElementById('clear-all');
 
@@ -40,8 +42,16 @@ const addClearEvent = () => {
   clearAllBtn.addEventListener('click',clearAll);
 };
 
+const addChngColorEvent = () => {
+  const previewBtn = document.getElementById('preview-btn');
+  previewBtn.addEventListener('click', themes.previewTheme);
+  const saveTheme = document.getElementById('save-CustomTheme-Btn');
+  saveTheme.addEventListener('click', themes.applyTheme);
+};
+
 module.exports = {
   addClearEvent,
   checkMessageExists,
   initializeChatListener,
+  addChngColorEvent,
 };
