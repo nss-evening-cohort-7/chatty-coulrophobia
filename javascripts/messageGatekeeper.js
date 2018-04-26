@@ -2,6 +2,7 @@ const xhr = require('./xhr');
 const messages = require('./messages');
 const printToDom = require('./printToDom');
 const events = require('./events');
+const domStringBuilder = require('./domStringBuilder');
 
 const whenUsersLoad = function () {
   const usersData = JSON.parse(this.responseText).users;
@@ -12,6 +13,7 @@ const whenUsersLoad = function () {
 const whenMessagesLoad = function () {
   const myMessages = JSON.parse(this.responseText);
   messages.setMessages(myMessages);
+  domStringBuilder(messages.getMessages());
 };
 
 const whenFailToLoad = function () {
