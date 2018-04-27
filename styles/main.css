@@ -117,3 +117,15 @@ span, label, form, ul {
 }
 
 /* End Emoji Picker Styles */
+
+/* Large Text Button Styles */
+
+h5.msg-large-text {
+  font-size: 18pt;
+}
+
+h6.msg-large-text {
+  font-size: 14pt;
+}
+
+/* End Large Text Button Styles */
