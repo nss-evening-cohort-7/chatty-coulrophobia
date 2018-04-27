@@ -23,10 +23,15 @@ const newMessage = () => {
   messages.push(addMessage());
 };
 
+const clearAllMessages = () => {
+  messages = [];
+};
+
 module.exports = {
   setUsers,
   getUsers,
   setMessages,
   getMessages,
   newMessage,
+  clearAllMessages,
 };

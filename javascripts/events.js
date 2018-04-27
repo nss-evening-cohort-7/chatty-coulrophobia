@@ -47,6 +47,7 @@ const checkMessageExists = () => {
 const clearAll = () => {
   messageBox.innerHTML = '';
   checkMessageExists();
+  messages.clearAllMessages();
 };
 
 const addClearEvent = () => {
