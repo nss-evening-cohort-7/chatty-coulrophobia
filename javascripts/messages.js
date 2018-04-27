@@ -28,11 +28,7 @@ const getUsers = () => {
 };
 
 const newMessage = () => {
-  if (typeof messages === undefined) {
-
-  } else {
-    messages.push(addMessage());
-  }
+  messages.push(addMessage());
 };
 
 module.exports = {
