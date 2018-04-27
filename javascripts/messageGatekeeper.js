@@ -29,6 +29,7 @@ const initializer = () => {
   events.initializeChatListener();
   events.initializeDeleteBtnListeners();
   events.addChngColorEvent();
+  events.addChangeThemeEvent();
 
   $('.picker').lsxEmojiPicker({
     twemoji: false,
