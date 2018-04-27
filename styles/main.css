@@ -72,6 +72,9 @@ span, label, form, ul {
 .message-padding-left {
   padding-left: 20px;
 }
+span {
+  pointer-events: none;
+}
 /* end Individual Messages Styling */
 
 

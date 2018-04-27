@@ -3,12 +3,20 @@ const addMessage = require('./add');
 let messages = [];
 let users = [];
 
+const resetMessages = () => {
+  messages = [];
+};
+
 const setMessages = (messageArray) => {
   messages = messageArray.messages;
 };
 
 const getMessages = () => {
   return messages;
+};
+
+const deleteMessage = arrayPosition => {
+  messages.splice(arrayPosition, 1);
 };
 
 const setUsers = (userArray) => {
@@ -23,15 +31,12 @@ const newMessage = () => {
   messages.push(addMessage());
 };
 
-const clearAllMessages = () => {
-  messages = [];
-};
-
 module.exports = {
   setUsers,
   getUsers,
   setMessages,
   getMessages,
   newMessage,
-  clearAllMessages,
+  deleteMessage,
+  resetMessages,
 };

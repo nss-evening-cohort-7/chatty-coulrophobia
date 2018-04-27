@@ -27,6 +27,7 @@ const initializer = () => {
   events.addClearEvent();
   events.addEditEvent();
   events.initializeChatListener();
+  events.initializeDeleteBtnListeners();
   events.addChngColorEvent();
   events.addLargeTextButtonEvent();
   $('.picker').lsxEmojiPicker({
