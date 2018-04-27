@@ -22,10 +22,29 @@ span, label, form, ul {
 .navbar-brand {
   padding: 0;
 }
+
 #chat-entry {
-  width: 400px;
   padding-right: 30px;
+}  
+
+@media (min-width: 1145px) {
+  #chat-entry {
+    width: 400px;
+  }
 }
+  
+@media (min-width: 1245px) {
+  #chat-entry {
+    width: 500px;
+  }
+}
+
+@media (min-width: 1345px) {
+  #chat-entry {
+    width: 600px;
+  }
+}
+
 /* end navbar styles */
 
 /* Container Styling */
