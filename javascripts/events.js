@@ -65,10 +65,18 @@ const addChngColorEvent = () => {
   saveTheme.addEventListener('click', themes.applyTheme);
 };
 
+const addChangeThemeEvent = () => {
+  const darkThemeBtn = document.getElementById('dark-theme');
+  darkThemeBtn.addEventListener('click',themes.applyTheme);
+  const lightThemeBtn = document.getElementById('light-theme');
+  lightThemeBtn.addEventListener('click',themes.applyTheme);
+};
+
 module.exports = {
   addClearEvent,
   checkMessageExists,
   addEditEvent,
   initializeChatListener,
   addChngColorEvent,
+  addChangeThemeEvent,
 };
