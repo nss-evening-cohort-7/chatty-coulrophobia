@@ -46,4 +46,6 @@ module.exports = {
   newMessage,
   deleteMessage,
   resetMessages,
+  setBadWords,
+  returnBadWords,
 };
