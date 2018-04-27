@@ -1,10 +1,13 @@
 const printToDom = (domString, divId) => {
   document.getElementById(divId).innerHTML = domString;
-  document.getElementById('save-CustomTheme-Btn').click();
-  if (document.getElementById('text-enlarger').classList.contains('active')) {
-    [...document.getElementsByTagName('h5'), ...document.getElementsByTagName('h6'),].forEach(element => {
-      element.classList.add('msg-large-text');
-    });
+  if (divId === 'message-container') {
+    document.getElementById('clear-all').disabled = false;
+    document.getElementById('save-CustomTheme-Btn').click();
+    if (document.getElementById('text-enlarger').classList.contains('active')) {
+      [...document.getElementsByTagName('h5'), ...document.getElementsByTagName('h6'),].forEach(element => {
+        element.classList.add('msg-large-text');
+      });
+    }
   }
 };
 
