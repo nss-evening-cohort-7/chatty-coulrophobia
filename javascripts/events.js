@@ -1,3 +1,4 @@
+const edit = require('./edit');
 const messages = require('./messages');
 const deleteThisMessage = require ('./delete');
 const domStringBuilder = require('./domStringBuilder');
@@ -8,15 +9,27 @@ const clearAllBtn = document.getElementById('clear-all');
 
 const initializeDeleteBtnListeners = () => {
   document.getElementById('message-container').addEventListener('click', deleteThisMessage);
+
+};
+
+const checkAddOrEdit = (entryField) => {
+  const editOn = document.getElementsByClassName('highlight')[0];
+  if (!editOn) {
+    messages.newMessage();
+    domStringBuilder();
+    entryField.value = '';
+  } else {
+    edit.reprintMessage();
+    domStringBuilder();
+    entryField.value = '';
+  };
 };
 
 const initializeChatListener = () => {
   const entryField = document.getElementById('chat-entry');
   entryField.addEventListener('keypress', e => {
     if (e.key === 'Enter' && entryField.value) {
-      messages.newMessage();
-      domStringBuilder(messages.getMessages());
-      entryField.value = '';
+      checkAddOrEdit(entryField);
     }
   });
 };
@@ -38,6 +51,7 @@ const checkMessageExists = () => {
 };
 
 const clearAll = () => {
+  messages.resetMessages();
   messageBox.innerHTML = '';
   checkMessageExists();
 };
@@ -45,6 +59,10 @@ const clearAll = () => {
 const addClearEvent = () => {
   const clearAllBtn = document.getElementById('clear-all');
   clearAllBtn.addEventListener('click',clearAll);
+};
+
+const addEditEvent = () => {
+  messageBox.addEventListener('click',edit.retrieveMessage);
 };
 
 const addChngColorEvent = () => {
@@ -57,6 +75,7 @@ const addChngColorEvent = () => {
 module.exports = {
   addClearEvent,
   checkMessageExists,
+  addEditEvent,
   initializeChatListener,
   initializeDeleteBtnListeners,
   addChngColorEvent,

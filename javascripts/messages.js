@@ -3,6 +3,10 @@ const addMessage = require('./add');
 let messages = [];
 let users = [];
 
+const resetMessages = () => {
+  messages = [];
+};
+
 const setMessages = (messageArray) => {
   messages = messageArray.messages;
 };
@@ -24,7 +28,11 @@ const getUsers = () => {
 };
 
 const newMessage = () => {
-  messages.push(addMessage());
+  if (typeof messages === undefined) {
+
+  } else {
+    messages.push(addMessage());
+  }
 };
 
 module.exports = {
@@ -34,4 +42,5 @@ module.exports = {
   getMessages,
   newMessage,
   deleteMessage,
+  resetMessages,
 };
