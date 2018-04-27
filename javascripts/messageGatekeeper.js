@@ -29,7 +29,7 @@ const initializer = () => {
   events.initializeChatListener();
   events.initializeDeleteBtnListeners();
   events.addChngColorEvent();
-
+  events.addLargeTextButtonEvent();
   $('.picker').lsxEmojiPicker({
     twemoji: false,
     onSelect: function (emoji) {
@@ -39,6 +39,7 @@ const initializer = () => {
         ].filter(element => {
           return element.title === emoji.name;
         })[0].innerText;
+      document.getElementById('chat-entry').focus();
     },
   });
   document.getElementsByClassName('lsx-emojipicker-container')[0].style.top = '5px';
