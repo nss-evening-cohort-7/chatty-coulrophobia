@@ -2,6 +2,7 @@ const xhr = require('./xhr');
 const messages = require('./messages');
 const printToDom = require('./printToDom');
 const events = require('./events');
+const domStringBuilder = require('./domStringBuilder');
 
 const whenUsersLoad = function () {
   const usersData = JSON.parse(this.responseText).users;
@@ -12,6 +13,7 @@ const whenUsersLoad = function () {
 const whenMessagesLoad = function () {
   const myMessages = JSON.parse(this.responseText);
   messages.setMessages(myMessages);
+  domStringBuilder(messages.getMessages());
 };
 
 const whenFailToLoad = function () {
@@ -25,6 +27,20 @@ const initializer = () => {
   events.addClearEvent();
   events.initializeChatListener();
   events.initializeDeleteBtnListeners();
+  events.addChngColorEvent();
+
+  $('.picker').lsxEmojiPicker({
+    twemoji: false,
+    onSelect: function (emoji) {
+      document.getElementById('chat-entry').value +=
+        [
+          ...document.getElementsByTagName('span'),
+        ].filter(element => {
+          return element.title === emoji.name;
+        })[0].innerText;
+    },
+  });
+  document.getElementsByClassName('lsx-emojipicker-container')[0].style.top = '5px';
 };
 
 module.exports = initializer;

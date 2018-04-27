@@ -24,6 +24,7 @@ span, label, form, ul {
 }
 #chat-entry {
   width: 400px;
+  padding-right: 30px;
 }
 /* end navbar styles */
 
@@ -33,6 +34,10 @@ span, label, form, ul {
   border: 4px solid black;
   border-radius: 6px;
   background: white;
+}
+
+.message-overall-div h3 {
+  display: inline-block;
 }
 /* end Container Styling */
 
@@ -44,6 +49,11 @@ span, label, form, ul {
   min-height: 300px;
   margin: 0px 0px 15px 0px;
   padding: 5px;
+}
+
+#clear-all {
+  float: right;
+  margin-top: 10px;
 }
 /* end Message Wrapper Styling */
 
@@ -65,3 +75,42 @@ span {
   pointer-events: none;
 }
 /* end Individual Messages Styling */
+
+#myModal {
+  z-index: 998;
+}
+
+.modal-backdrop {
+  z-index: 997;
+}
+
+.color-picker-btn {
+  height: 50px;;
+  width: 150px;
+}
+
+.modal-body {
+  height: 190px;
+}
+
+.preview-btn-container, .sample-container, .btn-container {
+  height: 165px;
+}
+
+.sample-container {
+  border: 2px solid black;
+}
+/* Custom Emoji Picker Styles */
+
+.lsx-emojipicker-container:after {
+  display: none;
+}
+
+.picker {
+  display: inline;
+  cursor: pointer;
+  position: relative;
+  left: -30px;
+}
+
+/* End Emoji Picker Styles */
