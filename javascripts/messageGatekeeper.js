@@ -4,6 +4,12 @@ const printToDom = require('./printToDom');
 const events = require('./events');
 const domStringBuilder = require('./domStringBuilder');
 
+const whenBadWordsLoad = function () {
+  const badWords = JSON.parse(this.responseText).words;
+  messages.setUsers(usersData);
+  printToDom.generateUserList(messages.getUsers());
+}
+
 const whenUsersLoad = function () {
   const usersData = JSON.parse(this.responseText).users;
   messages.setUsers(usersData);
