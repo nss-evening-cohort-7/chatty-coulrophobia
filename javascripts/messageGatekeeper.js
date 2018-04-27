@@ -25,6 +25,7 @@ const initializer = () => {
   xhr.loadMessages(whenMessagesLoad, whenFailToLoad);
   events.checkMessageExists();
   events.addClearEvent();
+  events.addEditEvent();
   events.initializeChatListener();
   events.addChngColorEvent();
 

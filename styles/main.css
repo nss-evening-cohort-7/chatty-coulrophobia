@@ -63,6 +63,7 @@ span, label, form, ul {
   border-radius: 4px;
   padding: 5px;
   background-color: rgb(238, 238, 238);
+  box-sizing: border-box;
 }
 .btn-message-edit,
 .btn-message-delete {
@@ -72,6 +73,11 @@ span, label, form, ul {
   padding-left: 20px;
 }
 /* end Individual Messages Styling */
+
+
+.highlight{
+  border: 3px solid red;
+}
 
 #myModal {
   z-index: 998;
