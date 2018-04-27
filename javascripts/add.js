@@ -7,7 +7,7 @@ const buildMessage = () => {
   const messageObject = {};
   messageObject.createTime = timestamp();
   messageObject.editTime = '';
-  messageObject.messageID = messageIdCounter.toString().padStart(5, '0');
+  messageObject.messageId = messageIdCounter.toString().padStart(5, '0');
   messageObject.message = document.getElementById('chat-entry').value;
   [...document.getElementById('user-select').children,].forEach(element => {
     if (element.selected) {
