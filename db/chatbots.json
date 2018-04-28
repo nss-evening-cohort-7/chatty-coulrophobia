@@ -12,7 +12,11 @@
           "hate you",
           "hey",
           "bye",
-          "weather"
+          "weather",
+          "hi",
+          "do you like",
+          "how are you",
+          "what is your name"
         ],
         "reply": [
           "No one can help you. Not anymore.",
@@ -23,7 +27,11 @@
           "What else is new? I'll just sit here, waiting for this conversation to end.",
           "Oh god, it's you.",
           "Go ahead and leave, just like everyone else.",
-          "What does it matter? Rain, sun, it's all the same."
+          "What does it matter? Rain, sun, it's all the same.",
+          "I am DespairBot. Not that you want to talk to me.",
+          "No. What is there to like about it?",
+          "It doesn't matter. Nothing matters.",
+          "DespairBot"
         ]
       }
     },
@@ -39,7 +47,11 @@
           "hate you",
           "hey",
           "bye",
-          "weather"
+          "weather",
+          "hi",
+          "do you like",
+          "how are you",
+          "what is your name"
         ],
         "reply": [
           "I'd love to help you.",
@@ -50,7 +62,11 @@
           "Don't say that, you know it isn't true.",
           "Just waiting on you, sunshine.",
           "I'll be counting the milliseconds 'til you get back.",
-          "It's always sunny when you are around."
+          "It's always sunny when you are around.",
+          "Why, hello there. I am HappyBot.",
+          "As long as it brings a smile to your face, what's not to like?",
+          "Things are super great right now!",
+          "HappyBot, at your service."
         ]
       }
     },
@@ -66,7 +82,11 @@
           "hate you",
           "hey",
           "bye",
-          "weather"
+          "weather",
+          "hi",
+          "do you like",
+          "how are you",
+          "what is your name"
         ],
         "reply": [
           "Believe that you can do it cause you can do it.",
@@ -77,7 +97,11 @@
           "I can't afford to hate people. I don't have that kind of time",
           "You are amazing. You never know what you can do until you get in there and try it.",
           "How do you make a round circle with a square knife? That’s your challenge for the day.",
-          "Lets build a happy little cloud."
+          "Lets build a happy little cloud.",
+          "Greetings to you, friend. I am BobRossBot.",
+          "The secret to doing anything is believing that you can do it. Anything that you believe you can do strong enough, you can do. Anything. As long as you believe.",
+          "I guess I’m a little weird. I like to talk to trees and animals. That’s okay though; I have more fun than most people.",
+          "BobRossBot"
         ]
       }
     },
@@ -93,7 +117,11 @@
           "hate you",
           "hey",
           "bye",
-          "weather"
+          "weather",
+          "hi",
+          "do you like",
+          "how are you",
+          "what is your name"
         ],
         "reply": [
           "Ooh yeah, let me help you.",
@@ -104,7 +132,11 @@
           "Oh, baby. You're just saying that 'cuz it's true.",
           "Don't give me that, get over here.",
           "Are you leaving already? But we just got started.",
-          "Who cares as long as you're here."
+          "Who cares as long as you're here.",
+          "I've been counting the seconds until you came back.",
+          "Anything that makes you happy, makes me happy.",
+          "I'm anything you would like me to be, baby.",
+          "LoverBot. Let me hear you say it."
         ]
       }
     },
@@ -120,7 +152,11 @@
           "hate you",
           "hey",
           "bye",
-          "weather"
+          "weather",
+          "hi",
+          "do you like",
+          "how are you",
+          "what is your name"
         ],
         "reply": [
           "Have you tried it yourself first?",
@@ -131,7 +167,11 @@
           "Oh yeah, what if I died tomorrow? How would you feel then?",
           "Don't you talk to me like that. I raised you better than that.",
           "Ok then, don't wait so long before coming back.",
-          "It looks like it'll be sunny, but you should bring an umbrella in case, and maybe your galoshes."
+          "It looks like it'll be sunny, but you should bring an umbrella in case, and maybe your galoshes.",
+          "It's been so long. Give your MomBot a hug.",
+          "As long as my little pumpkin is happy, it must be all right.",
+          "I am doing just peachy, bless your little heart.",
+          "Mombot, but you can call me Mom."
         ]
       }
     }
