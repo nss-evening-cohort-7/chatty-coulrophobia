@@ -3,6 +3,7 @@ const messages = require('./messages');
 const deleteThisMessage = require ('./delete');
 const domStringBuilder = require('./domStringBuilder');
 const themes = require('./themes');
+const chatBot = require('./chatBot');
 
 const messageBox = document.getElementById('message-container');
 const clearAllBtn = document.getElementById('clear-all');
@@ -18,6 +19,7 @@ const checkAddOrEdit = (entryField) => {
     messages.newMessage();
     domStringBuilder();
     entryField.value = '';
+    chatBot.startReply();
   } else {
     edit.reprintMessage();
     domStringBuilder();
@@ -32,6 +34,15 @@ const initializeChatListener = () => {
       checkAddOrEdit(entryField);
     }
   });
+};
+
+const chatListenerButton = () => {
+  document.getElementById('trigger-enter').addEventListener('click', runThis);
+};
+
+const runThis = () => {
+  const entryField = document.getElementById('chat-entry');
+  checkAddOrEdit(entryField);
 };
 
 const disableBtn = () => {
@@ -97,4 +108,5 @@ module.exports = {
   initializeDeleteBtnListeners,
   addChngColorEvent,
   addLargeTextButtonEvent,
+  chatListenerButton,
 };

@@ -16,6 +16,11 @@ const whenMessagesLoad = function () {
   domStringBuilder(messages.getMessages());
 };
 
+const whenChatBotsLoad = function () {
+  const chatBotUserFile = JSON.parse(this.responseText);
+  messages.setChatBots(chatBotUserFile);
+};
+
 const whenFailToLoad = function () {
   console.error('XHR Fails~~~~!!!');
 };
@@ -23,6 +28,7 @@ const whenFailToLoad = function () {
 const initializer = () => {
   xhr.loadUsers(whenUsersLoad, whenFailToLoad);
   xhr.loadMessages(whenMessagesLoad, whenFailToLoad);
+  xhr.chatBotUsers(whenChatBotsLoad, whenFailToLoad);
   events.checkMessageExists();
   events.addClearEvent();
   events.addEditEvent();
