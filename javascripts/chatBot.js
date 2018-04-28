@@ -8,20 +8,16 @@ const startReply = () => {
 
 const writeReply = () => {
   const chatBotUsers = messages.getChatBots();
-  const getLastMessage = messages.getMessages().pop().message;
+  const getLastMessage = messages.getMessages()[messages.getMessages().length - 1].message;
   const randomChatbot = Math.floor(Math.random() * Math.floor(chatBotUsers.length));
   const keywords = chatBotUsers[randomChatbot].response.keywords;
 
   keywords.forEach((word) => {
-    const foundWordIndex = getLastMessage.indexOf(word);
-    if (foundWordIndex > -1) {
-      document.getElementById('chat-entry').value = chatBotUsers[randomChatbot].response.reply[keywords.indexOf(word)];
-      document.getElementById('user-select').value = chatBotUsers[randomChatbot].name;
+    if (getLastMessage.toLowerCase().includes(word)) {
+      messages.newMessage(chatBotUsers[randomChatbot].response.reply[keywords.indexOf(word)], chatBotUsers[randomChatbot].id);
+      buildString.buildDomString();
     };
   });
-  messages.newMessage();
-  buildString.buildDomString();
-  document.getElementById('chat-entry').value = '';
 };
 
 module.exports = {
