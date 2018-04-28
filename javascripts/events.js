@@ -35,15 +35,6 @@ const initializeChatListener = () => {
   });
 };
 
-// const chatListenerButton = () => {
-//   document.getElementById('trigger-enter').addEventListener('click', runThis);
-// };
-
-// const runThis = () => {
-//   const entryField = document.getElementById('chat-entry');
-//   checkAddOrEdit(entryField);
-// };
-
 const disableBtn = () => {
   clearAllBtn.disabled = true;
 };
