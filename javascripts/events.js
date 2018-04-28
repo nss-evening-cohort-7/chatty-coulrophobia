@@ -3,7 +3,7 @@ const messages = require('./messages');
 const deleteThisMessage = require ('./delete');
 const stringBuilder = require('./domStringBuilder');
 const themes = require('./themes');
-const chatBot = require('./chatBot');
+const checkForBadWords = require('./badWords');
 
 const messageBox = document.getElementById('message-container');
 const clearAllBtn = document.getElementById('clear-all');
@@ -21,9 +21,9 @@ const checkAddOrEdit = (entryField) => {
   } else {
     messages.newMessage();
     stringBuilder.buildDomString();
+    checkForBadWords();
     entryField.value = '';
   }
-  chatBot.startReply();
 };
 
 const initializeChatListener = () => {
