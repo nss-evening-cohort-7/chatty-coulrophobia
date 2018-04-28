@@ -34,6 +34,7 @@ const newMessage = () => {
 
 const setBadWords = (input) => {
   badWords = input;
+  console.log(badWords);
 };
 
 const returnBadWords = () => badWords;

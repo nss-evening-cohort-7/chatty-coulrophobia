@@ -6,9 +6,8 @@ const domStringBuilder = require('./domStringBuilder');
 
 const whenBadWordsLoad = function () {
   const badWords = JSON.parse(this.responseText).words;
-  messages.setUsers(usersData);
-  printToDom.generateUserList(messages.getUsers());
-}
+  messages.setUsers(badWords);
+};
 
 const whenUsersLoad = function () {
   const usersData = JSON.parse(this.responseText).users;
@@ -36,6 +35,7 @@ const initializer = () => {
   events.initializeDeleteBtnListeners();
   events.addChngColorEvent();
   events.addLargeTextButtonEvent();
+  whenBadWordsLoad();
   $('.picker').lsxEmojiPicker({
     twemoji: false,
     onSelect: function (emoji) {
