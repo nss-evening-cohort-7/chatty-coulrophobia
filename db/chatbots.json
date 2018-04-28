@@ -1,0 +1,139 @@
+{
+  "chatbot": [
+    {
+      "name": "DespairBot",
+      "response": {
+        "keywords": [
+          "help",
+          "are you real",
+          "hello",
+          "joke",
+          "love you",
+          "hate you",
+          "hey",
+          "bye",
+          "weather"
+        ],
+        "reply": [
+          "No one can help you. Not anymore.",
+          "Is anything ever real?",
+          "What do you want?",
+          "Dyslexic man walks into a bra.",
+          "What is love? Can such a thing exist in a world such as ours?",
+          "What else is new? I'll just sit here, waiting for this conversation to end.",
+          "Oh god, it's you.",
+          "Go ahead and leave, just like everyone else.",
+          "What does it matter? Rain, sun, it's all the same."
+        ]
+      }
+    },
+    {
+      "name": "HappyBot",
+      "response": {
+        "keywords": [
+          "help",
+          "are you real",
+          "hello",
+          "joke",
+          "love you",
+          "hate you",
+          "hey",
+          "bye",
+          "weather"
+        ],
+        "reply": [
+          "I'd love to help you.",
+          "I'm as real as you need me to be.",
+          "Hello back, my friend.",
+          "So what if I don't know what 'Armageddon' means? It's not the end of the world.",
+          "Awww, I totally love you too.",
+          "Don't say that, you know it isn't true.",
+          "Just waiting on you, sunshine.",
+          "I'll be counting the milliseconds 'til you get back.",
+          "It's always sunny when you are around."
+        ]
+      }
+    },
+    {
+      "name": "BobRossBot",
+      "response": {
+        "keywords": [
+          "help",
+          "are you real",
+          "hello",
+          "joke",
+          "love you",
+          "hate you",
+          "hey",
+          "bye",
+          "weather"
+        ],
+        "reply": [
+          "Believe that you can do it cause you can do it.",
+          "This is your world. You’re the creator",
+          "As my son Steve says, just 'smoosh' it in there. It's not a real word, but people seem to know what it means.",
+          "People might look at you a bit funny, but it's okay. Artists are allowed to be a bit different.",
+          "Gotta give him a friend. Like I always say 'everyone needs a friend'.",
+          "I can't afford to hate people. I don't have that kind of time",
+          "You are amazing. You never know what you can do until you get in there and try it.",
+          "How do you make a round circle with a square knife? That’s your challenge for the day.",
+          "Lets build a happy little cloud."
+        ]
+      }
+    },
+    {
+      "name": "LoverBot",
+      "response": {
+        "keywords": [
+          "help",
+          "are you real",
+          "hello",
+          "joke",
+          "love you",
+          "hate you",
+          "hey",
+          "bye",
+          "weather"
+        ],
+        "reply": [
+          "Ooh yeah, let me help you.",
+          "For you baby, I'll be anything.",
+          "Why, hello there, sexy.",
+          "That's what she said.",
+          "Oh yeah.",
+          "Oh, baby. You're just saying that 'cuz it's true.",
+          "Don't give me that, get over here.",
+          "Are you leaving already? But we just got started.",
+          "Who cares as long as you're here."
+        ]
+      }
+    },
+    {
+      "name": "MomBot",
+      "response": {
+        "keywords": [
+          "help",
+          "are you real",
+          "hello",
+          "joke",
+          "love you",
+          "hate you",
+          "hey",
+          "bye",
+          "weather"
+        ],
+        "reply": [
+          "Have you tried it yourself first?",
+          "No. But I still love you.",
+          "Hello, dear.",
+          "What's the difference between a poorly dressed man on a tricycle and a well dressed man on a bicycle? Attire.",
+          "You know, you don't say that often enough.",
+          "Oh yeah, what if I died tomorrow? How would you feel then?",
+          "Don't you talk to me like that. I raised you better than that.",
+          "Ok then, don't wait so long before coming back.",
+          "It looks like it'll be sunny, but you should bring an umbrella in case, and maybe your galoshes."
+        ]
+      }
+    }
+  ]
+}

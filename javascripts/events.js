@@ -2,7 +2,7 @@ const edit = require('./edit');
 const messages = require('./messages');
 const deleteThisMessage = require ('./delete');
 const domStringBuilder = require('./domStringBuilder');
-const themes = require ('./themes');
+const themes = require('./themes');
 
 const messageBox = document.getElementById('message-container');
 const clearAllBtn = document.getElementById('clear-all');
@@ -57,11 +57,11 @@ const clearAll = () => {
 
 const addClearEvent = () => {
   const clearAllBtn = document.getElementById('clear-all');
-  clearAllBtn.addEventListener('click',clearAll);
+  clearAllBtn.addEventListener('click', clearAll);
 };
 
 const addEditEvent = () => {
-  messageBox.addEventListener('click',edit.retrieveMessage);
+  messageBox.addEventListener('click', edit.retrieveMessage);
 };
 
 const addChngColorEvent = () => {
@@ -71,6 +71,23 @@ const addChngColorEvent = () => {
   saveTheme.addEventListener('click', themes.applyTheme);
 };
 
+const addLargeTextButtonEvent = () => {
+  document.getElementById('text-enlarger').addEventListener('click', e => {
+    const h5andh6 = [...document.getElementsByTagName('h5'), ...document.getElementsByTagName('h6'),];
+    if (e.target.classList.contains('active')) {
+      e.target.classList.remove('active');
+      h5andh6.forEach(element => {
+        element.classList.remove('msg-large-text');
+      });
+    } else {
+      e.target.classList.add('active');
+      h5andh6.forEach(element => {
+        element.classList.add('msg-large-text');
+      });
+    }
+  });
+};
+
 module.exports = {
   addClearEvent,
   checkMessageExists,
@@ -78,4 +95,5 @@ module.exports = {
   initializeChatListener,
   initializeDeleteBtnListeners,
   addChngColorEvent,
+  addLargeTextButtonEvent,
 };
