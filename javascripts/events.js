@@ -4,7 +4,6 @@ const deleteThisMessage = require ('./delete');
 const stringBuilder = require('./domStringBuilder');
 const themes = require('./themes');
 const checkForBadWords = require('./badWords');
-const chatBot = require('./chatBot');
 
 const messageBox = document.getElementById('message-container');
 const clearAllBtn = document.getElementById('clear-all');
@@ -24,7 +23,6 @@ const checkAddOrEdit = (entryField) => {
     stringBuilder.buildDomString();
     checkForBadWords();
     entryField.value = '';
-    chatBot.startReply();
   }
 };
 
@@ -57,6 +55,7 @@ const clearAll = () => {
   messages.resetMessages();
   messageBox.innerHTML = '';
   checkMessageExists();
+  clearTimeout();
 };
 
 const addClearEvent = () => {
@@ -108,5 +107,4 @@ module.exports = {
   addChngColorEvent,
   addChangeThemeEvent,
   addLargeTextButtonEvent,
-  // chatListenerButton,
 };
