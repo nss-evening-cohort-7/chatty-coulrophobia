@@ -17,13 +17,13 @@ const checkAddOrEdit = (entryField) => {
   if (!editOn) {
     messages.newMessage();
     domStringBuilder();
+    checkForBadWords();
     entryField.value = '';
   } else {
     edit.reprintMessage();
     domStringBuilder();
-    checkForBadWords();
     entryField.value = '';
-  };
+  }
 };
 
 const initializeChatListener = () => {
