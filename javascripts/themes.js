@@ -7,13 +7,13 @@ const previewTheme = () => {
 };
 
 const applyTheme = (e) => {
-  const backgroundChangeBtn = document.getElementById('chng-bkgrd-color').innerHTML;
-  const textChangeBtn = document.getElementById('chng-txt-color').innerHTML;
   const messageContainers = document.getElementsByClassName('message');
   const darkBtn = document.getElementById('dark-theme');
   const lightBtn = document.getElementById('light-theme');
   const customBtn = document.getElementById('custom-theme');
   if (e.target.id === 'dark-theme') {
+    document.getElementById('chng-bkgrd-color').innerHTML = 'A9A9A9';
+    document.getElementById('chng-txt-color').innerHTML = 'FFFFFF';
     customBtn.classList.remove('active');
     lightBtn.classList.remove('active');
     e.target.classList.add('active');
@@ -22,6 +22,8 @@ const applyTheme = (e) => {
       messageContainers[i].style.color = `White`;
     };
   } else if (e.target.id === 'light-theme') {
+    document.getElementById('chng-bkgrd-color').innerHTML = 'FFFFFF';
+    document.getElementById('chng-txt-color').innerHTML = '000000';
     customBtn.classList.remove('active');
     darkBtn.classList.remove('active');
     e.target.classList.add('active');
@@ -30,6 +32,9 @@ const applyTheme = (e) => {
       messageContainers[i].style.color = `Black`;
     };
   } else {
+    const backgroundChangeBtn = document.getElementById('chng-bkgrd-color').innerHTML;
+    const textChangeBtn = document.getElementById('chng-txt-color').innerHTML;
+    document.getElementById('chng-txt-color').innerHTML;
     lightBtn.classList.remove('active');
     darkBtn.classList.remove('active');
     e.target.classList.add('active');
