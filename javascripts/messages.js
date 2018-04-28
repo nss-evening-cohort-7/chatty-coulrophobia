@@ -2,6 +2,7 @@ const addMessage = require('./add');
 
 let messages = [];
 let users = [];
+let chatBots = [];
 let badWords = [];
 
 const resetMessages = () => {
@@ -28,8 +29,16 @@ const getUsers = () => {
   return users;
 };
 
-const newMessage = () => {
-  messages.push(addMessage());
+const setChatBots = (chatBotsData) => {
+  chatBots = chatBotsData.chatbot;
+};
+
+const getChatBots = () => {
+  return chatBots;
+};
+
+const newMessage = (botMessage, botUser) => {
+  messages.push(addMessage(botMessage, botUser));
 };
 
 const setBadWords = (input) => {
@@ -46,6 +55,8 @@ module.exports = {
   newMessage,
   deleteMessage,
   resetMessages,
+  setChatBots,
+  getChatBots,
   setBadWords,
   returnBadWords,
 };

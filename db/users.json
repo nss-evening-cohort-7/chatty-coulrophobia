@@ -19,6 +19,26 @@
     {
       "id": "5",
       "name": "Pennywise"
+    },
+    {
+      "name": "DespairBot",
+      "id": "6"
+    },
+    {
+      "name": "HappyBot",
+      "id": "7"
+    },
+    {
+      "name": "BobRossBot",
+      "id": "8"
+    },
+    {
+      "name": "LoverBot",
+      "id": "9"
+    },
+    {
+      "name": "MomBot",
+      "id": "10"
     }
   ]
 }
