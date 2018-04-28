@@ -1,7 +1,7 @@
 const edit = require('./edit');
 const messages = require('./messages');
 const deleteThisMessage = require ('./delete');
-const domStringBuilder = require('./domStringBuilder');
+const stringBuilder = require('./domStringBuilder');
 const themes = require('./themes');
 const chatBot = require('./chatBot');
 
@@ -17,12 +17,12 @@ const checkAddOrEdit = (entryField) => {
   const editOn = document.getElementsByClassName('highlight')[0];
   if (!editOn) {
     messages.newMessage();
-    domStringBuilder();
+    stringBuilder.buildDomString();
     entryField.value = '';
     chatBot.startReply();
   } else {
     edit.reprintMessage();
-    domStringBuilder();
+    stringBuilder.buildDomString()();
     entryField.value = '';
   };
 };

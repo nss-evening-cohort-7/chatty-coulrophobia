@@ -1,5 +1,5 @@
 const messages = require('./messages');
-const domStringBuilder = require('./domStringBuilder');
+const stringBuilder = require('./domStringBuilder');
 
 // identify the message clicked with the matching message in the array
 const matchMessages = id => {
@@ -7,7 +7,7 @@ const matchMessages = id => {
   for (let i = 0; i < originalMessages.length; i++) {
     if (originalMessages[i].messageId === id) {
       messages.deleteMessage(i);
-      domStringBuilder(messages.getMessages());
+      stringBuilder.buildDomString();
     }
   }
 };

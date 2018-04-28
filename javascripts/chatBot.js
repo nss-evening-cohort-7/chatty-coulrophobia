@@ -1,5 +1,5 @@
 const messages = require('./messages');
-const add = require('./add');
+const buildString = require('./domStringBuilder');
 
 const startReply = () => {
   const timeAmt = Math.floor(Math.random() * 10000) + 1;
@@ -19,8 +19,9 @@ const writeReply = () => {
       document.getElementById('user-select').value = chatBotUsers[randomChatbot].name;
     };
   });
-  const chatMessage = add.messageBuilder();
-  console.log(chatMessage);
+  messages.newMessage();
+  buildString.buildDomString();
+  document.getElementById('chat-entry').value = '';
 };
 
 module.exports = {
