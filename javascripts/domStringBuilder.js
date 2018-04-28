@@ -43,4 +43,6 @@ const getUserName = (userId) => {
   return userName;
 };
 
-module.exports = buildDomString;
+module.exports = {
+  buildDomString,
+};
