@@ -21,22 +21,19 @@ const applyTheme = (e) => {
       messageContainers[i].style.backgroundColor = `DarkGray`;
       messageContainers[i].style.color = `White`;
     };
-    e.target.blur();
   } else if (e.target.id === 'light-theme') {
-    document.getElementById('chng-bkgrd-color').innerHTML = 'FFFFFF';
+    document.getElementById('chng-bkgrd-color').innerHTML = 'eeeeee';
     document.getElementById('chng-txt-color').innerHTML = '000000';
     customBtn.classList.remove('active');
     darkBtn.classList.remove('active');
     e.target.classList.add('active');
     for (let i = 0; i < messageContainers.length; i++) {
-      messageContainers[i].style.backgroundColor = `White`;
+      messageContainers[i].style.backgroundColor = `eeeeee`;
       messageContainers[i].style.color = `Black`;
     };
-    e.target.blur();
-  } else {
+  } else if (e.target.id === 'custom-theme') {
     const backgroundChangeBtn = document.getElementById('chng-bkgrd-color').innerHTML;
     const textChangeBtn = document.getElementById('chng-txt-color').innerHTML;
-    document.getElementById('chng-txt-color').innerHTML;
     lightBtn.classList.remove('active');
     darkBtn.classList.remove('active');
     e.target.classList.add('active');
@@ -44,8 +41,8 @@ const applyTheme = (e) => {
       messageContainers[i].style.backgroundColor = `#${backgroundChangeBtn}`;
       messageContainers[i].style.color = `#${textChangeBtn}`;
     };
-    e.target.blur();
   };
+  e.target.blur();
 };
 
 module.exports = {
