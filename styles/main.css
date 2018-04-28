@@ -72,11 +72,10 @@ span, label, form, ul {
 .message-padding-left {
   padding-left: 20px;
 }
-span {
+.ignore-click {
   pointer-events: none;
 }
 /* end Individual Messages Styling */
-
 
 .highlight{
   border: 3px solid red;
@@ -120,3 +119,15 @@ span {
 }
 
 /* End Emoji Picker Styles */
+
+/* Large Text Button Styles */
+
+h5.msg-large-text {
+  font-size: 18pt;
+}
+
+h6.msg-large-text {
+  font-size: 14pt;
+}
+
+/* End Large Text Button Styles */
