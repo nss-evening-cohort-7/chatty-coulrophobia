@@ -6,7 +6,7 @@ const domStringBuilder = require('./domStringBuilder');
 
 const whenBadWordsLoad = function () {
   const badWords = JSON.parse(this.responseText).words;
-  messages.setUsers(badWords);
+  messages.setBadWords(badWords);
 };
 
 const whenUsersLoad = function () {
@@ -28,6 +28,7 @@ const whenFailToLoad = function () {
 const initializer = () => {
   xhr.loadUsers(whenUsersLoad, whenFailToLoad);
   xhr.loadMessages(whenMessagesLoad, whenFailToLoad);
+  xhr.loadBadWords(whenBadWordsLoad, whenFailToLoad);
   events.checkMessageExists();
   events.addClearEvent();
   events.addEditEvent();
@@ -35,7 +36,6 @@ const initializer = () => {
   events.initializeDeleteBtnListeners();
   events.addChngColorEvent();
   events.addLargeTextButtonEvent();
-  whenBadWordsLoad();
   $('.picker').lsxEmojiPicker({
     twemoji: false,
     onSelect: function (emoji) {

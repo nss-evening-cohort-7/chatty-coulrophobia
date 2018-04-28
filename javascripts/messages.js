@@ -2,7 +2,7 @@ const addMessage = require('./add');
 
 let messages = [];
 let users = [];
-const badWords = [];
+let badWords = [];
 
 const resetMessages = () => {
   messages = [];
@@ -34,7 +34,6 @@ const newMessage = () => {
 
 const setBadWords = (input) => {
   badWords = input;
-  console.log(badWords);
 };
 
 const returnBadWords = () => badWords;
