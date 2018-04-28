@@ -21,6 +21,7 @@ const applyTheme = (e) => {
       messageContainers[i].style.backgroundColor = `DarkGray`;
       messageContainers[i].style.color = `White`;
     };
+    e.target.blur();
   } else if (e.target.id === 'light-theme') {
     document.getElementById('chng-bkgrd-color').innerHTML = 'FFFFFF';
     document.getElementById('chng-txt-color').innerHTML = '000000';
@@ -31,6 +32,7 @@ const applyTheme = (e) => {
       messageContainers[i].style.backgroundColor = `White`;
       messageContainers[i].style.color = `Black`;
     };
+    e.target.blur();
   } else {
     const backgroundChangeBtn = document.getElementById('chng-bkgrd-color').innerHTML;
     const textChangeBtn = document.getElementById('chng-txt-color').innerHTML;
@@ -42,6 +44,7 @@ const applyTheme = (e) => {
       messageContainers[i].style.backgroundColor = `#${backgroundChangeBtn}`;
       messageContainers[i].style.color = `#${textChangeBtn}`;
     };
+    e.target.blur();
   };
 };
 
