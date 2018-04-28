@@ -14,17 +14,17 @@ const initializeDeleteBtnListeners = () => {
 };
 
 const checkAddOrEdit = (entryField) => {
-  const editOn = document.getElementsByClassName('highlight')[0];
-  if (!editOn) {
+  const editOn = document.getElementsByClassName('highlight').length;
+  if (editOn) {
+    edit.reprintMessage();
+    stringBuilder.buildDomString();
+    entryField.value = '';
+  } else {
     messages.newMessage();
     stringBuilder.buildDomString();
     entryField.value = '';
-    chatBot.startReply();
-  } else {
-    edit.reprintMessage();
-    stringBuilder.buildDomString()();
-    entryField.value = '';
-  };
+  }
+  chatBot.startReply();
 };
 
 const initializeChatListener = () => {
@@ -36,14 +36,14 @@ const initializeChatListener = () => {
   });
 };
 
-const chatListenerButton = () => {
-  document.getElementById('trigger-enter').addEventListener('click', runThis);
-};
+// const chatListenerButton = () => {
+//   document.getElementById('trigger-enter').addEventListener('click', runThis);
+// };
 
-const runThis = () => {
-  const entryField = document.getElementById('chat-entry');
-  checkAddOrEdit(entryField);
-};
+// const runThis = () => {
+//   const entryField = document.getElementById('chat-entry');
+//   checkAddOrEdit(entryField);
+// };
 
 const disableBtn = () => {
   clearAllBtn.disabled = true;
@@ -108,5 +108,5 @@ module.exports = {
   initializeDeleteBtnListeners,
   addChngColorEvent,
   addLargeTextButtonEvent,
-  chatListenerButton,
+  // chatListenerButton,
 };

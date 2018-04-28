@@ -36,8 +36,8 @@ const getChatBots = () => {
   return chatBots;
 };
 
-const newMessage = () => {
-  messages.push(addMessage());
+const newMessage = (botMessage, botUser) => {
+  messages.push(addMessage(botMessage, botUser));
 };
 
 module.exports = {
