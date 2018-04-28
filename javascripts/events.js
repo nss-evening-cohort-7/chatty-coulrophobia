@@ -3,6 +3,7 @@ const messages = require('./messages');
 const deleteThisMessage = require ('./delete');
 const domStringBuilder = require('./domStringBuilder');
 const themes = require('./themes');
+const checkForBadWords = require('./badWords');
 
 const messageBox = document.getElementById('message-container');
 const clearAllBtn = document.getElementById('clear-all');
@@ -20,6 +21,7 @@ const checkAddOrEdit = (entryField) => {
   } else {
     edit.reprintMessage();
     domStringBuilder();
+    checkForBadWords();
     entryField.value = '';
   };
 };
