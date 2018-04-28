@@ -73,6 +73,13 @@ const addChngColorEvent = () => {
   saveTheme.addEventListener('click', themes.applyTheme);
 };
 
+const addChangeThemeEvent = () => {
+  const darkThemeBtn = document.getElementById('dark-theme');
+  darkThemeBtn.addEventListener('click',themes.applyTheme);
+  const lightThemeBtn = document.getElementById('light-theme');
+  lightThemeBtn.addEventListener('click',themes.applyTheme);
+};
+
 const addLargeTextButtonEvent = () => {
   document.getElementById('text-enlarger').addEventListener('click', e => {
     const h5andh6 = [...document.getElementsByTagName('h5'), ...document.getElementsByTagName('h6'),];
@@ -97,6 +104,7 @@ module.exports = {
   initializeChatListener,
   initializeDeleteBtnListeners,
   addChngColorEvent,
+  addChangeThemeEvent,
   addLargeTextButtonEvent,
   // chatListenerButton,
 };
