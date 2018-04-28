@@ -14,7 +14,16 @@ const loadMessages = (whenMessagesLoad,whenFailToLoad) => {
   xhr.send();
 };
 
+const loadBadWords = (whenMessagesLoad,whenFailToLoad) => {
+  const xhr = new XMLHttpRequest();
+  xhr.addEventListener('load',whenMessagesLoad);
+  xhr.addEventListener('error',whenFailToLoad);
+  xhr.open('GET','../db/badwords.json');
+  xhr.send();
+};
+
 module.exports = {
   loadUsers,
   loadMessages,
+  loadBadWords,
 };

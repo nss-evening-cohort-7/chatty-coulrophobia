@@ -4,6 +4,11 @@ const printToDom = require('./printToDom');
 const events = require('./events');
 const domStringBuilder = require('./domStringBuilder');
 
+const whenBadWordsLoad = function () {
+  const badWords = JSON.parse(this.responseText).words;
+  messages.setBadWords(badWords);
+};
+
 const whenUsersLoad = function () {
   const usersData = JSON.parse(this.responseText).users;
   messages.setUsers(usersData);
@@ -23,6 +28,7 @@ const whenFailToLoad = function () {
 const initializer = () => {
   xhr.loadUsers(whenUsersLoad, whenFailToLoad);
   xhr.loadMessages(whenMessagesLoad, whenFailToLoad);
+  xhr.loadBadWords(whenBadWordsLoad, whenFailToLoad);
   events.checkMessageExists();
   events.addClearEvent();
   events.addEditEvent();

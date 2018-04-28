@@ -9,7 +9,6 @@ const clearAllBtn = document.getElementById('clear-all');
 
 const initializeDeleteBtnListeners = () => {
   document.getElementById('message-container').addEventListener('click', deleteThisMessage);
-
 };
 
 const checkAddOrEdit = (entryField) => {

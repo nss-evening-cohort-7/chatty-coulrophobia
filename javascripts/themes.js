@@ -17,10 +17,10 @@ const applyTheme = (e) => {
     customBtn.classList.remove('active');
     lightBtn.classList.remove('active');
     e.target.classList.add('active');
-    for (let i = 0; i < messageContainers.length; i++) {
-      messageContainers[i].style.backgroundColor = `DarkGray`;
-      messageContainers[i].style.color = `White`;
-    };
+    // for (let i = 0; i < messageContainers.length; i++) {
+    //   messageContainers[i].style.backgroundColor = `DarkGray`;
+    //   messageContainers[i].style.color = `White`;
+    // };
     e.target.blur();
   } else if (e.target.id === 'light-theme') {
     document.getElementById('chng-bkgrd-color').innerHTML = 'FFFFFF';
@@ -28,23 +28,23 @@ const applyTheme = (e) => {
     customBtn.classList.remove('active');
     darkBtn.classList.remove('active');
     e.target.classList.add('active');
-    for (let i = 0; i < messageContainers.length; i++) {
-      messageContainers[i].style.backgroundColor = `White`;
-      messageContainers[i].style.color = `Black`;
-    };
+    // for (let i = 0; i < messageContainers.length; i++) {
+    //   messageContainers[i].style.backgroundColor = `White`;
+    //   messageContainers[i].style.color = `Black`;
+    // };
     e.target.blur();
-  } else {
-    const backgroundChangeBtn = document.getElementById('chng-bkgrd-color').innerHTML;
-    const textChangeBtn = document.getElementById('chng-txt-color').innerHTML;
+  } else if (e.target.id === 'save-CustomTheme-Btn') {
     document.getElementById('chng-txt-color').innerHTML;
     lightBtn.classList.remove('active');
     darkBtn.classList.remove('active');
-    e.target.classList.add('active');
-    for (let i = 0; i < messageContainers.length; i++) {
-      messageContainers[i].style.backgroundColor = `#${backgroundChangeBtn}`;
-      messageContainers[i].style.color = `#${textChangeBtn}`;
-    };
-    e.target.blur();
+    customBtn.classList.add('active');
+    customBtn.blur();
+  };
+  for (let i = 0; i < messageContainers.length; i++) {
+    const backgroundChangeBtn = document.getElementById('chng-bkgrd-color').innerHTML;
+    const textChangeBtn = document.getElementById('chng-txt-color').innerHTML;
+    messageContainers[i].style.backgroundColor = `#${backgroundChangeBtn}`;
+    messageContainers[i].style.color = `#${textChangeBtn}`;
   };
 };
 

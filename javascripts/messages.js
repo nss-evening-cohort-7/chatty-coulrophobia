@@ -2,6 +2,7 @@ const addMessage = require('./add');
 
 let messages = [];
 let users = [];
+let badWords = [];
 
 const resetMessages = () => {
   messages = [];
@@ -31,6 +32,12 @@ const newMessage = () => {
   messages.push(addMessage());
 };
 
+const setBadWords = (input) => {
+  badWords = input;
+};
+
+const returnBadWords = () => badWords;
+
 module.exports = {
   setUsers,
   getUsers,
@@ -39,4 +46,6 @@ module.exports = {
   newMessage,
   deleteMessage,
   resetMessages,
+  setBadWords,
+  returnBadWords,
 };
