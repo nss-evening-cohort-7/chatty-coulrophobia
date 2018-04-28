@@ -4,22 +4,20 @@ let input = '';
 let badWords = [];
 let badWordsUsed = [];
 
+const filterDuplicates = () => [ ...new Set(badWordsUsed),];
+
 const badWordAlertBuilder = () => {
   let output = '';
-  for (let i = 0; i < badWordsUsed.length; i++) {
-    if (badWordsUsed.indexOf(badWordsUsed[i])) {
-
-    } else {
-      output += `${badWordsUsed[i]} `;
-    }
+  const uniqueBadwords = filterDuplicates();
+  for (let i = 0; i < uniqueBadwords.length; i++) {
+    output += `${uniqueBadwords[i]} `;
   }
-  console.log(output);
   return output;
 };
 
 const alertUserOfBadWords = () => {
   alert(`Did yer' Momma teach you those words?! Please refrain from using these words: ${badWordAlertBuilder()}`);
-  badWordsUsed = [];
+  badWordsUsed = []; // reset array to empty after alerting the user
 };
 
 const splitMessageIntoArray = () => {
@@ -31,13 +29,11 @@ const checkForBadWords = () => {
   badWords = messages.returnBadWords();
   if (input.length > 0) { // only execute if there is text in the input field
     const splitMessageArray = splitMessageIntoArray();
-    // console.log(splitMessageArray);
-    // console.log(badWords);
+    // this loops through both arrays and matches bad words entered by user
     splitMessageArray.forEach(message => {
       badWords.forEach(badWord => {
         if (badWord.badWord === message) {
           badWordsUsed.push(badWord.badWord);
-          console.log('first function', badWordsUsed);
         }
       });
     });
