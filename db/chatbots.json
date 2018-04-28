@@ -1,7 +1,7 @@
 {
   "chatbot": [
     {
-      "name": "DespairBot",
+      "id": "6",
       "response": {
         "keywords": [
           "help",
@@ -28,7 +28,7 @@
       }
     },
     {
-      "name": "HappyBot",
+      "id": "7",
       "response": {
         "keywords": [
           "help",
@@ -55,7 +55,7 @@
       }
     },
     {
-      "name": "BobRossBot",
+      "id": "8",
       "response": {
         "keywords": [
           "help",
@@ -82,7 +82,7 @@
       }
     },
     {
-      "name": "LoverBot",
+      "id": "9",
       "response": {
         "keywords": [
           "help",
@@ -109,7 +109,7 @@
       }
     },
     {
-      "name": "MomBot",
+      "id": "10",
       "response": {
         "keywords": [
           "help",

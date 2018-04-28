@@ -2,7 +2,7 @@ const xhr = require('./xhr');
 const messages = require('./messages');
 const printToDom = require('./printToDom');
 const events = require('./events');
-const domStringBuilder = require('./domStringBuilder');
+const stringBuilder = require('./domStringBuilder');
 
 const whenBadWordsLoad = function () {
   const badWords = JSON.parse(this.responseText).words;
@@ -18,7 +18,12 @@ const whenUsersLoad = function () {
 const whenMessagesLoad = function () {
   const myMessages = JSON.parse(this.responseText);
   messages.setMessages(myMessages);
-  domStringBuilder(messages.getMessages());
+  stringBuilder.buildDomString();
+};
+
+const whenChatBotsLoad = function () {
+  const chatBotUserFile = JSON.parse(this.responseText);
+  messages.setChatBots(chatBotUserFile);
 };
 
 const whenFailToLoad = function () {
@@ -28,6 +33,7 @@ const whenFailToLoad = function () {
 const initializer = () => {
   xhr.loadUsers(whenUsersLoad, whenFailToLoad);
   xhr.loadMessages(whenMessagesLoad, whenFailToLoad);
+  xhr.chatBotUsers(whenChatBotsLoad, whenFailToLoad);
   xhr.loadBadWords(whenBadWordsLoad, whenFailToLoad);
   events.checkMessageExists();
   events.addClearEvent();

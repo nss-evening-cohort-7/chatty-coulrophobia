@@ -55,8 +55,8 @@ const applyTheme = (e) => {
     messageContainers[i].style.color = `#${textChangeBtn}`;
 =======
     for (let i = 0; i < messageContainers.length; i++) {
-      messageContainers[i].style.backgroundColor = `eeeeee`;
-      messageContainers[i].style.color = `Black`;
+      messageContainers[i].style.backgroundColor = `#eeeeee`;
+      messageContainers[i].style.color = `#000000`;
     };
   } else if (e.target.id === 'custom-theme') {
     const backgroundChangeBtn = document.getElementById('chng-bkgrd-color').innerHTML;

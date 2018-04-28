@@ -14,9 +14,11 @@ const printToDom = (domString, divId) => {
 const generateUserList = (users) => {
   let domString = '';
   users.forEach((user) => {
-    domString += `<option id='${user.id}'>${user.name}</option>`;
+    if (user.id < 6) {
+      domString += `<option id='${user.id}'>${user.name}</option>`;
+    }
+    printToDom(domString, 'user-select');
   });
-  printToDom(domString, 'user-select');
 };
 
 module.exports = {

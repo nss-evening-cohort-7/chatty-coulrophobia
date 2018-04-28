@@ -1,8 +1,9 @@
 const edit = require('./edit');
 const messages = require('./messages');
 const deleteThisMessage = require ('./delete');
-const domStringBuilder = require('./domStringBuilder');
+const stringBuilder = require('./domStringBuilder');
 const themes = require('./themes');
+const chatBot = require('./chatBot');
 
 const messageBox = document.getElementById('message-container');
 const clearAllBtn = document.getElementById('clear-all');
@@ -12,16 +13,17 @@ const initializeDeleteBtnListeners = () => {
 };
 
 const checkAddOrEdit = (entryField) => {
-  const editOn = document.getElementsByClassName('highlight')[0];
-  if (!editOn) {
-    messages.newMessage();
-    domStringBuilder();
+  const editOn = document.getElementsByClassName('highlight').length;
+  if (editOn) {
+    edit.reprintMessage();
+    stringBuilder.buildDomString();
     entryField.value = '';
   } else {
-    edit.reprintMessage();
-    domStringBuilder();
+    messages.newMessage();
+    stringBuilder.buildDomString();
     entryField.value = '';
-  };
+  }
+  chatBot.startReply();
 };
 
 const initializeChatListener = () => {
@@ -104,4 +106,5 @@ module.exports = {
   addChngColorEvent,
   addChangeThemeEvent,
   addLargeTextButtonEvent,
+  // chatListenerButton,
 };
