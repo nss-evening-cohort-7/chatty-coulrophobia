@@ -23,8 +23,8 @@ const checkAddOrEdit = (entryField) => {
     stringBuilder.buildDomString();
     checkForBadWords();
     entryField.value = '';
-  }
-  chatBot.startReply();
+    chatBot.startReply();
+  };
 };
 
 const initializeChatListener = () => {
