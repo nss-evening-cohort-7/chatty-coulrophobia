@@ -20,7 +20,7 @@
 
 <body>
   <!-- navbar -->
-  <nav class="navbar navbar-default">
+  <nav class="navbar navbar-default navbar-static-top">
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
@@ -42,19 +42,15 @@
           <div class="form-group chat-entry">
             <label for="sel1">Select user: </label>
             <select class="form-control" id="user-select">
-
             </select>
-
-
-              <input type="text" class="form-control input-block-level" placeholder="Enter chat message" id="chat-entry">
-              <div class="picker">😄</div>
+            <input type="text" class="form-control input-block-level" placeholder="Enter chat message" id="chat-entry">
+            <div class="picker">😄</div>
           </div>
 
         </div>
         <ul class="nav navbar-nav navbar-right">
-          <button type="button" class="btn btn-default btn-lg" id="text-enlarger">Large Text</button>
-          <div class="btn-group btn-group-lg" role="group" aria-label="...">
-            <button type="button" class="btn btn-default active">Light</button>
+          <div class="btn-group" role="group" aria-label="...">
+            <button type="button" class="btn btn-default">Light</button>
             <button type="button" class="btn btn-default">Dark</button>
             <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">Custom</button>
           </div>
@@ -65,29 +61,29 @@
     <!-- /.container-fluid -->
   </nav>
 
-<!-- MODAL CONTAINER -->
-<!-- Modal -->
+  <!-- MODAL CONTAINER -->
+  <!-- Modal -->
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
           <h4 class="modal-title" id="myModalLabel">Pick your Poison</h4>
         </div>
         <div class="modal-body">
           <div class="modal-body-container">
             <div class="col-sm-5 btn-container">
               <p>Background Color:</p>
-              <button
-        class="jscolor {value:'fff'} color-picker-btn"
-        style="border:2px solid black" id="chng-bkgrd-color"></button>
+              <button class="jscolor {value:'fff'} color-picker-btn" style="border:2px solid black" id="chng-bkgrd-color"></button>
               <p>Text Color:</p>
-              <button
-        class="jscolor {value:'000'} color-picker-btn"
-        style="border:2px solid black" id="chng-txt-color"></button>
+              <button class="jscolor {value:'000'} color-picker-btn" style="border:2px solid black" id="chng-txt-color"></button>
             </div>
             <div class="col-sm-2 preview-btn-container  text-center">
-              <button class="btn btn-default" id="preview-btn"><span class="glyphicon glyphicon-eye-open"></span></button>
+              <button class="btn btn-default" id="preview-btn">
+                <span class="glyphicon glyphicon-eye-open"></span>
+              </button>
             </div>
             <div class="col-sm-5 sample-container" id="preview">
               <p>There is nothing laughable about a clown in the moonlight.</p>
@@ -106,12 +102,15 @@
 
   <div class='container-fluid message-overall-div'>
     <h3>Messages:</h3>
-    <button type="button" class="btn btn-default" id="clear-all">Clear All Messages</button>
+    <button type="button" class="btn btn-default top-of-messages" id="text-enlarger">Large Text</button>
+
     <div class='messages-wrapper' id='message-container'>
     </div>
+    <button type="button" class="btn btn-default" id="clear-all">Clear All Messages</button>
+  </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jscolor/2.0.4/jscolor.min.js"></script>
-    <script src="dist/app.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jscolor/2.0.4/jscolor.min.js"></script>
+  <script src="dist/app.js"></script>
 </body>
 
 </html>
