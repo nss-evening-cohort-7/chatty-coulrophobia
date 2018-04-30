@@ -40,6 +40,16 @@ The user can preview their selection of colors by clicking on the eye button.
 
 ![Custom color theme creator modal](https://raw.githubusercontent.com/nss-evening-cohort-7/chatty-coulrophobia/master/images/screenshots/custom-2.png)
 ___
+
+A stretch goal of ours was to build a chat bot that users could interact with. Depending on what phrases the users send, the chat bot would respond with a custom message. As well, there are various personalities that may respond, from DespairBot, to BobRossBot, to MomBot.
+
+![Automated chat bot response](https://raw.githubusercontent.com/nss-evening-cohort-7/chatty-coulrophobia/master/images/screenshots/chat-bot-response.png)
+___
+
+A second strech goal was to build a filter to capture bad words. The user would be notified of their civility and the word(s) in question would be identified.
+
+![Bad word filter](https://raw.githubusercontent.com/nss-evening-cohort-7/chatty-coulrophobia/master/images/screenshots/bad-words.png)
+___
 ## Running The Project
 1. Clone down this repo and CD into project.
 2. Install the [http-server](https://www.npmjs.com/package/http-server) plugin via [npm](https://www.npmjs.com/).
