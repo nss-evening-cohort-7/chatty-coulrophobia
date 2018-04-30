@@ -30,7 +30,7 @@ span, label, form, ul {
 
 #chat-entry {
   padding-right: 30px;
-}  
+}
 
 @media (min-width: 868px) {
   #chat-entry {
@@ -43,7 +43,7 @@ span, label, form, ul {
     width: 400px;
   }
 }
-  
+
 @media (min-width: 1068px) {
   #chat-entry {
     width: 500px;
@@ -123,6 +123,7 @@ span, label, form, ul {
 
 #myModal {
   z-index: 998;
+  margin-top: 55px;
 }
 
 .modal-backdrop {
