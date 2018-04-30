@@ -4,13 +4,21 @@
 /* Overall Styling */
 body {
   background-color: aliceblue;
+  box-sizing: border-box;
 }
+
 h1, h2, h3 {
   font-family: 'Quattrocento', serif;
 }
+
 h4, h5, h6, p, a, input, button,
 span, label, form, ul {
   font-family: 'Montserrat', sans-serif;
+}
+
+.row {
+  margin-left: 0px;
+  margin-right: 0px;
 }
 /* End Overall Styling */
 
@@ -82,8 +90,11 @@ span, label, form, ul {
   border: 2px solid black;
   border-radius: 4px;
   min-height: 300px;
+  max-height: 500px;
   margin: 0px 0px 5px 0px;
   padding: 5px;
+  overflow-x: none;
+  overflow-y: scroll;
 }
 
 #text-enlarger {
@@ -105,22 +116,28 @@ span, label, form, ul {
   background-color: rgb(238, 238, 238);
   box-sizing: border-box;
 }
+
 .btn-message-edit,
 .btn-message-delete {
   margin: 3px;
 }
+
 .message-padding-left {
   padding-left: 20px;
 }
+
 .ignore-click {
   pointer-events: none;
 }
 /* end Individual Messages Styling */
 
+/* Edit Messages Styling */
 .highlight{
   border: 3px solid red;
 }
+/* end Edit Messages Styling */
 
+/* Modal Styling */
 #myModal {
   z-index: 998;
   margin-top: 55px;
@@ -146,6 +163,8 @@ span, label, form, ul {
 .sample-container {
   border: 2px solid black;
 }
+/* end Edit Messages Styling */
+
 /* Custom Emoji Picker Styles */
 
 .lsx-emojipicker-container:after {
