@@ -46,7 +46,7 @@ A stretch goal of ours was to build a chat bot that users could interact with. D
 ![Automated chat bot response](https://raw.githubusercontent.com/nss-evening-cohort-7/chatty-coulrophobia/master/images/screenshots/chat-bot-response.png)
 ___
 
-A second strech goal was to build a filter to capture bad words. The user would be notified of their civility and the word(s) in question would be identified.
+A second strech goal was to build a filter to capture bad words. The user would be notified of their lack of civility and the word(s) in question would be identified.
 
 ![Bad word filter](https://raw.githubusercontent.com/nss-evening-cohort-7/chatty-coulrophobia/master/images/screenshots/bad-words.png)
 ___
