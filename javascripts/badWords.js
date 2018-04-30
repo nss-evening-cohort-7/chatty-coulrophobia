@@ -41,7 +41,10 @@ const checkForBadWords = () => {
 
   if (badWordsUsed.length > 0) {
     alertUserOfBadWords();
-  }  // only returns bad word array if there are items in it
+    return true;
+  }  else {
+    return false;
+  }// only returns bad word array if there are items in it
 };
 
 module.exports = checkForBadWords;

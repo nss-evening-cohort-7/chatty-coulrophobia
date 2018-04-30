@@ -19,11 +19,16 @@ const checkAddOrEdit = (entryField) => {
     stringBuilder.buildDomString();
     entryField.value = '';
   } else {
-    messages.newMessage();
-    stringBuilder.buildDomString();
-    checkForBadWords();
-    entryField.value = '';
-    chatBot.startReply();
+    if (checkForBadWords() === true) {
+      // do nothing
+    } else {
+      messages.newMessage();
+      stringBuilder.buildDomString();
+      checkForBadWords();
+      entryField.value = '';
+      chatBot.startReply();
+    }
+
   };
 };
 
