@@ -1,8 +1,8 @@
 const printToDom = (domString, divId) => {
+  const outputDiv = document.getElementById(divId);
   const lightTheme = document.getElementById('light-theme');
   const darkTheme = document.getElementById('dark-theme');
   const customBtn = document.getElementById('save-CustomTheme-Btn');
-  document.getElementById(divId).innerHTML = domString;
   if (divId === 'message-container') {
     document.getElementById('clear-all').disabled = false;
     if (lightTheme.classList.contains('active')) {
@@ -18,6 +18,14 @@ const printToDom = (domString, divId) => {
         element.classList.add('msg-large-text');
       });
     }
+  }
+  let midEdit = false;
+  if (document.getElementsByClassName('highlight').length === 1) {
+    midEdit = true;
+  }
+  outputDiv.innerHTML = domString;
+  if (outputDiv.scrollHeight - outputDiv.clientHeight > outputDiv.scrollTop + 1 && midEdit === false) {
+    outputDiv.scrollTop = outputDiv.scrollHeight - outputDiv.clientHeight;
   }
 };
 

@@ -56,7 +56,6 @@ const reprintMessage = () => {
       allMessages[i].editTime = lastEditedTime;
     };
   };
-  removeHighlight();
 };
 
 module.exports = {
